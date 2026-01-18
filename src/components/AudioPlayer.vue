@@ -21,27 +21,21 @@ const playAudio = () => {
       isPlaying = false;
     });
     // 播放后立即移除所有事件监听器
-    document.removeEventListener('click', playAudio);
-    document.removeEventListener('scroll', playAudio);
-    document.removeEventListener('keydown', playAudio);
-    document.removeEventListener('touchstart', playAudio);
+    document.removeEventListener('click', playAudio, true);
+    document.removeEventListener('touchstart', playAudio, true);
   }
 };
 
 onMounted(() => {
-  // 监听用户的第一次交互（多种交互方式）
-  document.addEventListener('click', playAudio, { once: true, passive: true });
-  document.addEventListener('scroll', playAudio, { once: true, passive: true });
-  document.addEventListener('keydown', playAudio, { once: true, passive: true });
-  document.addEventListener('touchstart', playAudio, { once: true, passive: true });
+  // 只使用点击和触摸事件作为触发条件
+  document.addEventListener('click', playAudio, { once: true, capture: true, passive: true });
+  document.addEventListener('touchstart', playAudio, { once: true, capture: true, passive: true });
 });
 
 onUnmounted(() => {
   // 组件卸载时移除事件监听器
-  document.removeEventListener('click', playAudio);
-  document.removeEventListener('scroll', playAudio);
-  document.removeEventListener('keydown', playAudio);
-  document.removeEventListener('touchstart', playAudio);
+  document.removeEventListener('click', playAudio, true);
+  document.removeEventListener('touchstart', playAudio, true);
 });
 </script>
 
