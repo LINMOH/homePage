@@ -2,7 +2,7 @@ export const categoriesData = {
     website: [
         {
             id: 'website-1',
-            title: 'linmohan.fun',
+            title: 'My Blog',
             description: 'Personal blog',
             gradient: 'linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%)',
             status: 'Active',
