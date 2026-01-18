@@ -5,17 +5,31 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const audioPlayer = ref(null);
+let hasInteracted = false;
 
-onMounted(() => {
-  if (audioPlayer.value) {
+const playAudio = () => {
+  if (!hasInteracted && audioPlayer.value) {
+    hasInteracted = true;
     audioPlayer.value.volume = 0.1;
     audioPlayer.value.play().catch(error => {
-      console.log('自动播放被阻止，需要用户交互:', error);
+      console.log('播放失败:', error);
     });
   }
+};
+
+onMounted(() => {
+  // 监听点击和滚动事件
+  document.addEventListener('click', playAudio);
+  document.addEventListener('scroll', playAudio);
+});
+
+onUnmounted(() => {
+  // 组件卸载时移除事件监听
+  document.removeEventListener('click', playAudio);
+  document.removeEventListener('scroll', playAudio);
 });
 </script>
 
