@@ -1,0 +1,49 @@
+/* 颜色系统 - CSS变量 */
+:root {
+  /* 主色调 */
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-light: #818cf8;
+
+  /* 背景色 - 暗色主题 */
+  --bg-primary: #0b0f19;
+  --bg-secondary: #0d1320;
+  --bg-tertiary: #1a1b3a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+
+  /* 文字颜色 */
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --text-muted: rgba(255, 255, 255, 0.6);
+
+  /* 边框颜色 */
+  --border-color: #1f2937;
+  --border-light: rgba(255, 255, 255, 0.1);
+
+  /* 状态颜色 */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* 过渡动画 */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* 字体 */
+  --font-family: var(--font-verdana);
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+}
