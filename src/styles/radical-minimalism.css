@@ -1,0 +1,243 @@
+
+/* 
+ * 激进扁平化 (Radical Flatness) - 核心设计系统
+ * 这是一套冷酷的物理法则，剔除所有感官上的"肉感"，只保留逻辑的骨架
+ */
+
+:root {
+  /* 背景色 - 仅纯白 */
+  --bg: #FFFFFF;
+
+  /* 文字色 - 纯黑与深炭灰 */
+  --text-main: #000000;
+  --text-sub: #666666;
+
+  /* 边框颜色 - 极浅灰 */
+  --border-color: #EAEAEA;
+
+  /* 唯一强调色 - 克莱因蓝 */
+  --accent: #002FA7;
+
+  /* 严格间距系统 */
+  --space-unit: 8px;
+  --pad-xs: calc(var(--space-unit) * 1);
+  --pad-sm: calc(var(--space-unit) * 2);
+  --pad-md: calc(var(--space-unit) * 4);
+  --pad-lg: calc(var(--space-unit) * 10);
+  --pad-xl: calc(var(--space-unit) * 15);
+
+  /* 字体定义 */
+  @font-face {
+    font-family: 'Futura';
+    src: url('../assets/futura.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Verdena';
+    src: url('../assets/verdana.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* 字体系统 - 极致对比 */
+  --font-family: "Verdena", "Helvetica Neue", Arial, sans-serif;
+  --font-family-heading: "Futura", "Helvetica Neue", Arial, sans-serif;
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 24px;
+  --font-size-xl: 48px;
+  --font-size-xxl: 120px;
+
+  /* 字重系统 - 极致对比 */
+  --font-weight-regular: 400;
+  --font-weight-bold: 900;
+}
+
+/* 铁律 1 & 4: 零维度与零装饰，强制直角 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  transition: none !important;
+}
+
+/* 铁律 3: 严苛的色彩限制 */
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* 铁律 2: "发丝线"分割原则 */
+.hairline {
+  border: 1px solid var(--border-color);
+}
+
+.hairline-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hairline-top {
+  border-top: 1px solid var(--border-color);
+}
+
+.hairline-right {
+  border-right: 1px solid var(--border-color);
+}
+
+.hairline-left {
+  border-left: 1px solid var(--border-color);
+}
+
+/* 铁律 3: 唯一强调色 - 仅用于可点击元素 */
+.accent-text {
+  color: var(--accent);
+}
+
+/* 铁律 5: 排版即结构 - 巨大的留白与极端的字号对比 */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--pad-lg);
+}
+
+/* 铁律 4: 几何形态与直角 - 按钮样式 */
+.btn {
+  background: var(--text-main);
+  color: var(--bg);
+  border: none;
+  padding: 12px 24px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+/* 链接样式 - 铁律 3: 悬浮瞬变强调色 */
+a {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* 铁律 5: 排版即结构 */
+.title-massive {
+  font-size: var(--font-size-xxl);
+  line-height: 0.9;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -5px;
+  font-family: var(--font-family-heading);
+}
+
+.title-large {
+  font-size: var(--font-size-xl);
+  line-height: 1.1;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -2px;
+  font-family: var(--font-family-heading);
+}
+
+.title-medium {
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+}
+
+.text-body {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-sub);
+}
+
+.text-small {
+  font-size: var(--font-size-sm);
+  color: var(--text-sub);
+}
+
+.text-tiny {
+  font-size: var(--font-size-xs);
+  color: var(--text-sub);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 铁律 2: 网格系统 - 使用边框分割实现线框感 */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* 卡片样式 - 铁律 2 & 4: 纯二维框线与直角 */
+.card {
+  padding: var(--pad-md);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-sm);
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+/* 响应式设计 - 保持线框逻辑 */
+@media (max-width: 1024px) {
+  .title-massive {
+    font-size: 80px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .title-massive {
+    font-size: 60px;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-right: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-massive {
+    font-size: 40px;
+  }
+
+  .title-large {
+    font-size: 32px;
+  }
+}

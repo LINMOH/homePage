@@ -12,11 +12,9 @@ export function extractRepoInfo(githubUrl) {
   if (!githubUrl || !githubUrl.includes('github.com')) {
     return null;
   }
-
   try {
     const url = new URL(githubUrl);
     const pathParts = url.pathname.split('/').filter(Boolean);
-
     if (pathParts.length >= 2) {
       return {
         owner: pathParts[0],
@@ -40,23 +38,17 @@ export async function fetchRepoInfo(owner, repo) {
   if (!owner || !repo) {
     return null;
   }
-
   const cacheKey = `${owner}/${repo}`;
-
   // 检查缓存
   if (repoCache.has(cacheKey)) {
     return repoCache.get(cacheKey);
   }
-
   try {
     const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
-
     if (!response.ok) {
       throw new Error(`GitHub API error: ${response.status}`);
     }
-
     const data = await response.json();
-
     // 提取并格式化仓库信息
     const repoInfo = {
       owner: data.owner?.login || null,
@@ -80,10 +72,8 @@ export async function fetchRepoInfo(owner, repo) {
       hasWiki: data.has_wiki || false,
       hasPages: data.has_pages || false
     };
-
     // 缓存结果
     repoCache.set(cacheKey, repoInfo);
-
     return repoInfo;
   } catch (error) {
     console.error('Error fetching repo info:', error);
@@ -100,7 +90,6 @@ export function getTimeAgo(dateStr) {
   if (!dateStr) {
     return 'Unknown';
   }
-
   const date = new Date(dateStr);
   const now = new Date();
   const diffMs = now - date;
@@ -170,15 +159,12 @@ export function useGithubRepo(githubUrl, refreshInterval = 5 * 60 * 1000) {
   // 获取仓库信息
   const fetchInfo = async () => {
     const repoData = extractRepoInfo(githubUrl);
-
     if (!repoData) {
       error.value = 'Invalid GitHub URL';
       return;
     }
-
     loading.value = true;
     error.value = null;
-
     try {
       const info = await fetchRepoInfo(repoData.owner, repoData.repo);
       repoInfo.value = info;
@@ -198,7 +184,6 @@ export function useGithubRepo(githubUrl, refreshInterval = 5 * 60 * 1000) {
   });
 
   let updateInterval = null;
-
   onUnmounted(() => {
     if (updateInterval) {
       clearInterval(updateInterval);
@@ -209,7 +194,6 @@ export function useGithubRepo(githubUrl, refreshInterval = 5 * 60 * 1000) {
     // 状态
     loading,
     error,
-
     // 仓库信息
     repoInfo,
     owner,
@@ -232,10 +216,8 @@ export function useGithubRepo(githubUrl, refreshInterval = 5 * 60 * 1000) {
     isPrivate,
     hasWiki,
     hasPages,
-
     // 时间显示
     displayTime,
-
     // 工具方法
     refresh: fetchInfo
   };

@@ -11,14 +11,12 @@ export const getFollowerCount = async (vmid) => {
   if (followerCache[vmid]) {
     return followerCache[vmid];
   }
-
   try {
     // 使用Vite代理URL（开发环境）或直接使用API（生产环境）
     const apiUrl =
       import.meta.env.DEV
         ? `/api/bilibili/x/relation/stat?vmid=${vmid}&web_location=333.1387`
         : `https://api.bilibili.com/x/relation/stat?vmid=${vmid}&web_location=333.1387`;
-
     const response = await fetch(apiUrl, {
       headers: {
         'User-Agent':
@@ -56,10 +54,8 @@ export const getFollowerCount = async (vmid) => {
 export const fetchBilibiliFollowers = async (items) => {
   const result = {};
   const bilibiliCards = items.filter((item) => item.isFollowerCard);
-
   for (const card of bilibiliCards) {
     result[card.vmid] = await getFollowerCount(card.vmid);
   }
-
   return result;
 };

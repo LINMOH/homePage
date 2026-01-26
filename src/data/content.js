@@ -1,0 +1,249 @@
+// 网页所有文字内容
+export const content = {
+  // 网站基础信息
+  site: {
+    name: 'LIN MOHAN',
+    title: 'Lin Mohan - Personal Homepage',
+    description: 'Personal homepage of Lin Mohan, a Grade 9 student passionate about computer science and web development.',
+    keywords: 'Lin Mohan, portfolio, homepage, web development, programming',
+    logo: '/avatar.png',
+    favicon: '/avatar.png'
+  },
+
+  // 侧栏内容
+  sidebar: {
+    userName: 'LIN MOHAN',
+    userHandle: '@LINMOH',
+    location: 'JINAN, CHINA',
+    bio: 'Grade 9 / Computer Science'
+  },
+
+  // 英雄区内容
+  hero: {
+    title: 'BUILD.<br />THINK.<br />CREATE.',
+    subtitle: 'VER. 2026'
+  },
+
+  // 关于部分内容
+  about: {
+    title: '01 / ABOUT',
+    text: "I am a Grade 9 student from a small county in Jinan, China. Growing up where formal computer education was scarce, I was lucky to discover computers early. This sparked a self-driven journey through programming, Linux, web development, and systems architecture.<br />As my academic workload intensified in middle school, I faced a turning point. I had to move away from 'chasing speed' and competitive comparisons. Instead, I began to prioritize sustainability: the quiet confidence that I will still be sitting in front of a screen years from now, solving problems with the same passion.<br />Along the way, I’ve navigated confusion and trade-offs. I explored the Olympiad in Informatics (OI) and learned from mentors, but ultimately chose a path that fits my own pace. I no longer view learning as a race, but as a long-term process fueled by curiosity and discipline. While my environment remains resource-limited, my mindset has shifted. I now maximize what I have—the internet, my time, and a community of like-minded peers. We build, we exchange, and we grow together. I am still learning, still exploring, and very much still on my way.",
+    stats: [
+      {
+        number: '15+',
+        label: 'PROJECTS'
+      },
+      {
+        number: '8+',
+        label: 'YEARS'
+      },
+      {
+        number: '1000+',
+        label: 'COMMITS'
+      }
+    ]
+  },
+
+  // 技能部分内容
+  skills: {
+    title: '02 / SKILLS',
+    items: [
+      {
+        id: 'skill-1',
+        name: 'C / C++',
+        description: 'Used as a tool to learn algorithms and understand the foundations of computer systems.',
+        level: 85
+      },
+      {
+        id: 'skill-2',
+        name: 'Golang',
+        description: 'Used for building simple backend services and tools, with a focus on clarity and concurrency.',
+        level: 60
+      },
+      {
+        id: 'skill-3',
+        name: 'Python',
+        description: 'Used for scripting, automation, and quick experimentation.',
+        level: 75
+      },
+      {
+        id: 'skill-4',
+        name: 'JAVA',
+        description: 'Used for learning object-oriented programming and building basic applications.',
+        level: 50
+      },
+      {
+        id: 'skill-5',
+        name: 'Node.js',
+        description: 'Used in small projects to handle server-side logic and APIs.',
+        level: 70
+      },
+      {
+        id: 'skill-6',
+        name: 'Vue.js',
+        description: 'Used for building simple, interactive user interfaces on the web.',
+        level: 85
+      }
+    ]
+  },
+
+  // 网站项目内容
+  websites: {
+    title: '03 / WEBSITES',
+    items: [
+      {
+        id: 'website-1',
+        title: 'My Blog',
+        description: 'Personal blog about technology and life',
+        status: 'ACTIVE',
+        link: 'https://blog.linmohan.fun'
+      },
+      {
+        id: 'website-4',
+        title: 'linmohan.fun',
+        description: 'Personal homepage and portfolio',
+        status: 'ACTIVE',
+        link: 'https://linmohan.fun'
+      },
+      {
+        id: 'website-5',
+        title: 'book.linmohan.fun',
+        description: 'A curated library for programming, computer science, and long-term learning.',
+        status: 'ACTIVE',
+        link: 'https://book.linmohan.fun'
+      },
+      {
+        id: 'website-5',
+        title: 'TATEN Website',
+        description: 'Official website of TATEN programming team',
+        status: 'ACTIVE',
+        link: 'https://taten.xyz'
+      },
+      {
+        id: 'website-2',
+        title: 'bailan.top',
+        description: 'Embrace chill life, resist stress and overwork.',
+        status: 'ACTIVE',
+        link: 'https://bailan.top'
+      },
+      {
+        id: 'website-3',
+        title: 'no.neijuan.fun',
+        description: 'Say no to stress, embrace balanced life.',
+        status: 'COMPLETED',
+        link: 'https://no.neijuan.fun'
+      },
+    ]
+  },
+
+  // 项目内容
+  projects: {
+    title: '04 / PROJECTS',
+    items: [
+      {
+        id: 'project-1',
+        title: 'AniDay',
+        description: 'Anime day tracker and calendar',
+        status: 'MIGRATING',
+        link: 'https://github.com/TATENcn/AniDay'
+      },
+      {
+        id: 'project-2',
+        title: 'boochi.fans',
+        description: 'Boochi fan website and community',
+        status: 'PAUSED',
+        link: 'https://github.com/LINMOH/boochi.fans'
+      },
+      {
+        id: 'project-3',
+        title: 'TATEN-OJ',
+        description: 'A simple, fast and open source Online Judge.',
+        status: 'PLANNING',
+        link: '#'
+      },
+      {
+        id: 'project-4',
+        title: 'student-computer-handbook',
+        description: 'Student computer handbook and resources',
+        status: 'PLANNING',
+        link: 'https://github.com/LINMOH/student-computer-handbook'
+      }
+    ]
+  },
+
+  // 联系方式内容
+  contact: {
+    title: '05 / CONTACT',
+    items: [
+      {
+        id: 'contact-1',
+        title: 'Email',
+        description: 'linmhwork@outlook.com',
+        type: 'EMAIL',
+        link: 'mailto:linmhwork@outlook.com'
+      },
+      {
+        id: 'contact-2',
+        title: 'GitHub',
+        description: 'LINMOH',
+        type: 'CODE',
+        link: 'https://github.com/LINMOH'
+      },
+      {
+        id: 'contact-3',
+        title: 'Bilibili',
+        description: '-LinMH-',
+        type: 'MEDIA',
+        link: 'https://space.bilibili.com/2126856300'
+      },
+      {
+        id: 'contact-4',
+        title: 'Zhihu',
+        description: '-LinMH-',
+        type: 'MEDIA',
+        link: 'https://www.zhihu.com/people/lin-56-61-20'
+      },
+      {
+        id: 'contact-5',
+        title: 'QQ',
+        description: '2113836986',
+        type: 'CHAT',
+        link: 'https://qm.qq.com/cgi-bin/qm/qr?k=tnjMHnEtiEZ1ZxjxzdH3RaXlLTnTzGBX'
+      },
+      {
+        id: 'contact-6',
+        title: 'Location',
+        description: 'Jinan, Shandong, China',
+        type: 'LOCATION',
+        link: '#'
+      }
+    ]
+  },
+
+  // 团队部分内容
+  team: {
+    title: '05 / ABOUT TEAM',
+    logo: '/taten.png',
+    text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> is a small, student-led technical team formed by middle school students from China. The team began in an environment with limited access to formal computer science education, where most learning relied on self-exploration, online resources, and peer collaboration.<br />From the beginning, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> was not built around competition or short-term goals. Instead, it grew out of a shared curiosity about how computers, software, and systems actually work. Team members explored programming languages, Linux systems, web development, and basic computer science concepts through building projects and experimenting together.<br />As academic pressure increased, the team adjusted its pace and direction. Rather than pursuing speed or external comparison, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> chose a sustainable path — learning steadily, focusing on fundamentals, and building things that are genuinely useful or interesting. Progress has been uneven at times, but continuous.<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> remains a small team with limited resources, but strong internal motivation. Members share knowledge, discuss ideas, review each other's work, and grow together. The team is still evolving, still learning, and still moving forward — one project at a time.",
+    stats: [
+      {
+        number: '13+',
+        label: 'Members'
+      },
+      {
+        number: '12+',
+        label: 'Cities'
+      },
+      {
+        number: '20+',
+        label: 'Tech Stacks'
+      }
+    ]
+  },
+
+  // 页脚内容
+  footer: {
+    location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',
+    established: 'EST. 2026'
+  }
+};
