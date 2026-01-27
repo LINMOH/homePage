@@ -83,18 +83,18 @@
         >
           <div class="card-meta">00{{ index + 1 }} / {{ project.status }}</div>
           <h3 class="card-title">{{ project.title }}</h3>
-          <p class="card-desc">{{ project.description }}</p>
+          <p class="card-desc">{{ getProjectDescription(project) }}</p>
           <div v-if="project.link && project.link.includes('github.com')" class="github-stats">
             <div class="github-stat">
-              <span class="github-icon">★</span>
+              <i class="fa-solid fa-star github-icon"></i>
               <span class="github-value">{{ getProjectInfo(project.id)?.stars || 0 }}</span>
             </div>
             <div class="github-stat">
-              <span class="github-icon">⑂</span>
+              <i class="fa-solid fa-code-fork github-icon"></i>
               <span class="github-value">{{ getProjectInfo(project.id)?.forks || 0 }}</span>
             </div>
             <div class="github-stat">
-              <span class="github-icon">●</span>
+              <i class="fa-solid fa-circle github-icon"></i>
               <span class="github-value">{{ getProjectInfo(project.id)?.language || 'N/A' }}</span>
             </div>
           </div>
@@ -110,7 +110,7 @@
       <div class="about-content">
         <div class="team-logo" :class="{ 'animate': isTeamVisible }">
           <a href="https://taten.xyz/" target="_blank" rel="noopener noreferrer" class="team-logo-link">
-            <img :src="content.team.logo" :alt="content.team.title" />
+            <img :src="getPublicPath(content.team.logo)" :alt="content.team.title" />
           </a>
         </div>
         <p class="about-text" v-html="content.team.text"></p>
@@ -147,20 +147,38 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { content } from '../data/content.js';
+import { ref, onMounted, computed, watch } from 'vue';
+import { currentLanguage, getPublicPath } from '../locales';
 import { useGithubRepo } from '../api/github.js';
+import zhCN from '../locales/zh-CN.js';
+import enUS from '../locales/en-US.js';
+import jaJP from '../locales/ja-JP.js';
+
+// 根据当前语言获取内容
+const content = computed(() => {
+  const lang = currentLanguage.value;
+  if (lang === 'zh') return zhCN;
+  if (lang === 'jp') return jaJP;
+  return enUS;
+});
 
 const typedTitle = ref('');
-const fullTitle = content.hero.title;
+const fullTitle = computed(() => content.value.hero?.title || '');
 let currentIndex = 0;
 
 const typeWriter = () => {
-  if (currentIndex < fullTitle.length) {
-    typedTitle.value += fullTitle.charAt(currentIndex);
-    currentIndex++;
-    setTimeout(typeWriter, 100);
-  }
+  typedTitle.value = '';
+  currentIndex = 0;
+
+  const typeNextChar = () => {
+    if (currentIndex < fullTitle.value.length) {
+      typedTitle.value += fullTitle.value.charAt(currentIndex);
+      currentIndex++;
+      setTimeout(typeNextChar, 100);
+    }
+  };
+
+  typeNextChar();
 };
 
 // 技能进度条动画
@@ -175,15 +193,24 @@ const isTeamVisible = ref(false);
 const githubProjects = ref([]);
 
 // 初始化 GitHub 项目信息
-content.projects.items.forEach(project => {
-  if (project.link && project.link.includes('github.com')) {
-    const projectInfo = useGithubRepo(project.link);
-    githubProjects.value.push({
-      id: project.id,
-      ...projectInfo
-    });
-  }
-});
+const initializeGithubProjects = () => {
+  githubProjects.value = [];
+  content.value.projects?.items?.forEach(project => {
+    if (project.link && project.link.includes('github.com')) {
+      const projectInfo = useGithubRepo(project.link);
+      githubProjects.value.push({
+        id: project.id,
+        ...projectInfo
+      });
+    }
+  });
+};
+
+// 监听语言变化，重新初始化 GitHub 项目和打字效果
+watch(currentLanguage, () => {
+  initializeGithubProjects();
+  typeWriter();
+}, { immediate: true });
 
 const checkSkillsVisibility = () => {
   if (skillSectionRef.value) {
@@ -217,9 +244,18 @@ const getProjectInfo = (projectId) => {
   return githubProjects.value.find(p => p.id === projectId);
 };
 
-onMounted(() => {
-  setTimeout(typeWriter, 500);
+// 获取项目描述，优先使用 GitHub API 的描述
+const getProjectDescription = (project) => {
+  if (project.link && project.link.includes('github.com')) {
+    const info = getProjectInfo(project.id);
+    if (info && info.description) {
+      return info.description;
+    }
+  }
+  return project.description;
+};
 
+onMounted(() => {
   // 添加滚动监听
   window.addEventListener('scroll', checkSkillsVisibility);
   window.addEventListener('resize', checkSkillsVisibility);

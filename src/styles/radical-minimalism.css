@@ -26,21 +26,6 @@
   --pad-lg: calc(var(--space-unit) * 10);
   --pad-xl: calc(var(--space-unit) * 15);
 
-  /* 字体定义 */
-  @font-face {
-    font-family: 'Futura';
-    src: url('../assets/futura.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Verdena';
-    src: url('../assets/verdana.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
   /* 字体系统 - 极致对比 */
   --font-family: "Verdena", "Helvetica Neue", Arial, sans-serif;
   --font-family-heading: "Futura", "Helvetica Neue", Arial, sans-serif;
@@ -56,13 +41,67 @@
   --font-weight-bold: 900;
 }
 
+/* 字体定义 */
+@font-face {
+  font-family: 'Futura';
+  src: url('../assets/futura.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Verdena';
+  src: url('../assets/verdana.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 暗色主题：黑不是装饰，是介质 */
+[data-theme="dark"] {
+  /* 背景系统：非纯黑，保留最小层次 */
+  --bg: #0A0A0A;              /* 主背景：深物理黑 */
+  --bg-elevated: #111111;     /* 结构层 / 卡片 */
+  /* 文字系统：避免刺眼纯白 */
+  --text-main: #EDEDED;       /* 主文字 */
+  --text-sub: #9A9A9A;        /* 次要说明 */
+  --text-muted: #666666;      /* 辅助 / 注释 */
+  /* 线条系统：发丝线在暗色下更克制 */
+  --border-color: #262626;    /* 结构分割线 */
+  /* 唯一强调色：冷静、理性、不发光 */
+  --accent: rgb(93, 120, 201);          /* 冷调克莱因蓝 */
+  /* 状态色（可选，但很有用） */
+  --accent-hover: #3A6BFF;
+  --danger: #C63636;
+  --success: #3FA36C;
+}
+
+/* 亮色主题 */
+[data-theme="light"] {
+  /* 背景色 - 仅纯白 */
+  --bg: #FFFFFF;
+
+  /* 文字色 - 纯黑与深炭灰 */
+  --text-main: #000000;
+  --text-sub: #666666;
+
+  /* 边框颜色 - 极浅灰 */
+  --border-color: #EAEAEA;
+
+  /* 唯一强调色 - 克莱因蓝 */
+  --accent: #002FA7;
+}
+
 /* 铁律 1 & 4: 零维度与零装饰，强制直角 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border-radius: 0 !important;
-  transition: none !important;
+}
+
+/* 主题切换平滑过渡 */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* 铁律 3: 严苛的色彩限制 */
@@ -139,7 +178,7 @@ a:hover {
   font-size: var(--font-size-xxl);
   line-height: 0.9;
   font-weight: var(--font-weight-bold);
-  letter-spacing: -5px;
+  letter-spacing: 0;
   font-family: var(--font-family-heading);
 }
 
@@ -147,7 +186,7 @@ a:hover {
   font-size: var(--font-size-xl);
   line-height: 1.1;
   font-weight: var(--font-weight-bold);
-  letter-spacing: -2px;
+  letter-spacing: 0;
   font-family: var(--font-family-heading);
 }
 
@@ -155,6 +194,7 @@ a:hover {
   font-size: var(--font-size-lg);
   line-height: 1.2;
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
   font-family: var(--font-family-heading);
 }
 

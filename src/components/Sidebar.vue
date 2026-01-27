@@ -2,7 +2,7 @@
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="avatar-section">
-        <img :src="content.site.logo" :alt="content.site.name" class="avatar" />
+        <img :src="getPublicPath(content.site.logo)" :alt="content.site.name" class="avatar" />
         <h1 class="user-name">{{ content.sidebar.userName }}</h1>
         <p class="user-handle">{{ content.sidebar.userHandle }}</p>
       </div>
@@ -16,7 +16,19 @@
 </template>
 
 <script setup>
-import { content } from '../data/content.js';
+import { computed } from 'vue';
+import { currentLanguage, getPublicPath } from '../locales';
+import zhCN from '../locales/zh-CN.js';
+import enUS from '../locales/en-US.js';
+import jaJP from '../locales/ja-JP.js';
+
+// 根据当前语言获取内容
+const content = computed(() => {
+  const lang = currentLanguage.value;
+  if (lang === 'zh') return zhCN;
+  if (lang === 'jp') return jaJP;
+  return enUS;
+});
 </script>
 
 <style scoped>

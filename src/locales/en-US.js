@@ -1,33 +1,24 @@
-// 网页所有文字内容
-export const content = {
-  // 网站基础信息
+export default {
   site: {
     name: 'LIN MOHAN',
     title: 'Lin Mohan - Personal Homepage',
     description: 'Personal homepage of Lin Mohan, a Grade 9 student passionate about computer science and web development.',
     keywords: 'Lin Mohan, portfolio, homepage, web development, programming',
-    logo: '/avatar.png',
-    favicon: '/avatar.png'
+    logo: '/avatar.png'
   },
-
-  // 侧栏内容
   sidebar: {
     userName: 'LIN MOHAN',
     userHandle: '@LINMOH',
     location: 'JINAN, CHINA',
     bio: 'Grade 9 / Computer Science'
   },
-
-  // 英雄区内容
   hero: {
     title: 'BUILD.<br />THINK.<br />CREATE.',
     subtitle: 'VER. 2026'
   },
-
-  // 关于部分内容
   about: {
     title: '01 / ABOUT',
-    text: "I am a Grade 9 student from a small county in Jinan, China. Growing up where formal computer education was scarce, I was lucky to discover computers early. This sparked a self-driven journey through programming, Linux, web development, and systems architecture.<br />As my academic workload intensified in middle school, I faced a turning point. I had to move away from 'chasing speed' and competitive comparisons. Instead, I began to prioritize sustainability: the quiet confidence that I will still be sitting in front of a screen years from now, solving problems with the same passion.<br />Along the way, I’ve navigated confusion and trade-offs. I explored the Olympiad in Informatics (OI) and learned from mentors, but ultimately chose a path that fits my own pace. I no longer view learning as a race, but as a long-term process fueled by curiosity and discipline. While my environment remains resource-limited, my mindset has shifted. I now maximize what I have—the internet, my time, and a community of like-minded peers. We build, we exchange, and we grow together. I am still learning, still exploring, and very much still on my way.",
+    text: "I am a Grade 9 student from a small county in Jinan, China. Growing up where formal computer education was scarce, I was lucky to discover computers early. This sparked a self-driven journey through programming, Linux, web development, and systems architecture.<br />As my academic workload intensified in middle school, I faced a turning point. I had to move away from 'chasing speed' and competitive comparisons. Instead, I began to prioritize sustainability: the quiet confidence that I will still be sitting in front of a screen years from now, solving problems with the same passion.<br />Along the way, I've navigated confusion and trade-offs. I explored the Olympiad in Informatics (OI) and learned from mentors, but ultimately chose a path that fits my own pace. I no longer view learning as a race, but as a long-term process fueled by curiosity and discipline. While my environment remains resource-limited, my mindset has shifted. I now maximize what I have—the internet, my time, and a community of like-minded peers. We build, we exchange, and we grow together. I am still learning, still exploring, and very much still on my way.",
     stats: [
       {
         number: '15+',
@@ -43,8 +34,6 @@ export const content = {
       }
     ]
   },
-
-  // 技能部分内容
   skills: {
     title: '02 / SKILLS',
     items: [
@@ -52,12 +41,12 @@ export const content = {
         id: 'skill-1',
         name: 'C / C++',
         description: 'Used as a tool to learn algorithms and understand the foundations of computer systems.',
-        level: 85
+        level: 70
       },
       {
         id: 'skill-2',
         name: 'Golang',
-        description: 'Used for building simple backend services and tools, with a focus on clarity and concurrency.',
+        description: 'Used for building backend services and tools, with a focus on clarity and concurrency.',
         level: 60
       },
       {
@@ -74,20 +63,42 @@ export const content = {
       },
       {
         id: 'skill-5',
-        name: 'Node.js',
-        description: 'Used in small projects to handle server-side logic and APIs.',
-        level: 70
+        name: 'Vue.js',
+        description: 'Used for building simple, interactive user interfaces on the web.',
+        level: 75
       },
       {
         id: 'skill-6',
-        name: 'Vue.js',
-        description: 'Used for building simple, interactive user interfaces on the web.',
+        name: 'Linux',
+        description: 'Familiar with Linux system usage and basic administration.',
         level: 85
+      },
+      {
+        id: 'skill-7',
+        name: 'Unreal Engine',
+        description: 'Used for learning game development, real-time rendering, and interactive system design.',
+        level: 60
+      },
+      {
+        id: 'skill-8',
+        name: 'Algorithms & Data Structures',
+        description: 'Learning core algorithms and data structures, focusing on problem-solving and logical thinking.',
+        level: 30
+      },
+      {
+        id: 'skill-9',
+        name: 'Operating system',
+        description: 'Learning how operating systems work, including processes, memory, and basic system concepts.',
+        level: 40
+      },
+      {
+        id: 'skill-10',
+        name: 'Video Production',
+        description: 'Using Blender, DaVinci Resolve, After Effects, and Premiere Pro for video editing and visual creation.',
+        level: 60
       }
     ]
   },
-
-  // 网站项目内容
   websites: {
     title: '03 / WEBSITES',
     items: [
@@ -132,25 +143,21 @@ export const content = {
         description: 'Say no to stress, embrace balanced life.',
         status: 'COMPLETED',
         link: 'https://no.neijuan.fun'
-      },
+      }
     ]
   },
-
-  // 项目内容
   projects: {
     title: '04 / PROJECTS',
     items: [
       {
         id: 'project-1',
         title: 'AniDay',
-        description: 'Anime day tracker and calendar',
         status: 'MIGRATING',
         link: 'https://github.com/TATENcn/AniDay'
       },
       {
         id: 'project-2',
         title: 'boochi.fans',
-        description: 'Boochi fan website and community',
         status: 'PAUSED',
         link: 'https://github.com/LINMOH/boochi.fans'
       },
@@ -164,14 +171,11 @@ export const content = {
       {
         id: 'project-4',
         title: 'student-computer-handbook',
-        description: 'Student computer handbook and resources',
         status: 'PLANNING',
         link: 'https://github.com/LINMOH/student-computer-handbook'
       }
     ]
   },
-
-  // 联系方式内容
   contact: {
     title: '05 / CONTACT',
     items: [
@@ -219,8 +223,6 @@ export const content = {
       }
     ]
   },
-
-  // 团队部分内容
   team: {
     title: '05 / ABOUT TEAM',
     logo: '/taten.png',
@@ -240,10 +242,8 @@ export const content = {
       }
     ]
   },
-
-  // 页脚内容
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',
-    established: 'EST. 2026'
+    copyrightStartYear: '2023'
   }
-};
+}
