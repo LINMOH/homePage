@@ -152,14 +152,12 @@ export default {
       {
         id: 'project-1',
         title: 'AniDay',
-        description: '动漫日程追踪与日历工具',
         status: 'MIGRATING',
         link: 'https://github.com/TATENcn/AniDay'
       },
       {
         id: 'project-2',
         title: 'boochi.fans',
-        description: '波奇相关的粉丝网站与社区',
         status: 'PAUSED',
         link: 'https://github.com/LINMOH/boochi.fans'
       },
@@ -173,7 +171,6 @@ export default {
       {
         id: 'project-4',
         title: 'student-computer-handbook',
-        description: '学生计算机学习手册与资源整理',
         status: 'PLANNING',
         link: 'https://github.com/LINMOH/student-computer-handbook'
       }
