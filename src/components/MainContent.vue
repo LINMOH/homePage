@@ -143,6 +143,9 @@
         </a>
       </div>
     </section>
+
+    <!-- 评论部分 -->
+    <GiscusComments />
   </main>
 </template>
 
@@ -153,6 +156,7 @@ import { useGithubRepo } from '../api/github.js';
 import zhCN from '../locales/zh-CN.js';
 import enUS from '../locales/en-US.js';
 import jaJP from '../locales/ja-JP.js';
+import GiscusComments from './GiscusComments.vue';
 
 // 根据当前语言获取内容
 const content = computed(() => {

@@ -223,6 +223,9 @@ export default {
       }
     ]
   },
+  comments: {
+    title: '06 / 评论'
+  },
   team: {
     title: '05 / 关于团队',
     logo: '/taten.png',

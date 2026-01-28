@@ -223,6 +223,9 @@ export default {
       }
     ]
   },
+  comments: {
+    title: '06 / COMMENTS'
+  },
   team: {
     title: '05 / ABOUT TEAM',
     logo: '/taten.png',

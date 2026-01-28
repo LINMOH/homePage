@@ -20,33 +20,17 @@
 </template>
 
 <script setup>
-import { onMounted, watch } from 'vue';
-import { currentLanguage, setLanguage } from './locales';
+import { onMounted } from 'vue';
+import { setLanguage } from './locales';
 import TimeBar from './components/TimeBar.vue';
 import Sidebar from './components/Sidebar.vue';
 import MainContent from './components/MainContent.vue';
 import Footer from './components/Footer.vue';
 import MusicPlayer from './components/MusicPlayer.vue';
 
-// 根据路径初始化语言
+// 初始化默认语言
 onMounted(() => {
-  const path = window.location.pathname;
-  if (path === '/zh') {
-    setLanguage('zh');
-  } else if (path === '/jp') {
-    setLanguage('jp');
-  } else {
-    setLanguage('en');
-  }
-});
-
-// 监听语言变化，更新 URL
-watch(currentLanguage, (newLang) => {
-  const langPath = newLang === 'en' ? '' : `/${newLang}`;
-  const newPath = langPath || '/';
-  if (window.location.pathname !== newPath) {
-    window.history.pushState({}, '', newPath);
-  }
+  setLanguage('en');
 });
 </script>
 
