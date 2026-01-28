@@ -36,7 +36,7 @@ const currentTime = ref('');
 let timer = null;
 
 // 主题切换
-const isDarkMode = ref(true);
+const isDarkMode = ref(false);
 
 const toggleTheme = () => {
   isDarkMode.value = !isDarkMode.value;
@@ -86,6 +86,11 @@ onMounted(() => {
   if (savedTheme) {
     isDarkMode.value = savedTheme === 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
+  } else {
+    // 默认使用浅色主题
+    isDarkMode.value = false;
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
   }
 
   // 添加点击外部关闭下拉菜单的事件监听

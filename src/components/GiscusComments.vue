@@ -28,7 +28,7 @@ let themeObserver = null;
 
 // 获取当前主题
 const getCurrentTheme = () => {
-  return document.documentElement.getAttribute('data-theme') || 'dark';
+  return document.documentElement.getAttribute('data-theme') || 'light';
 };
 
 // 语言映射
