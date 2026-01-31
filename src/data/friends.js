@@ -2,16 +2,16 @@
 export const friends = [
   {
     id: 'friend-1',
-    name: 'Yaten',
+    name: 'Susan',
     avatar: 'https://s1.imagehub.cc/images/2025/11/29/4f89970e09825cb0f04c9989e370dc9d.png',
     link: 'https://mryoung2022.github.io/',
     status: 'ACTIVE'
   },
   {
     id: 'friend-2',
-    name: 'Susan',
+    name: 'Yaten',
     avatar: 'https://s1.imagehub.cc/images/2025/05/30/55439681d8b3c2d988638c133e160a56.jpg',
-    link: 'https://yaten-z.github.io/',
+    link: 'https://yaten.xyz/',
     status: 'ACTIVE'
   },
   {
