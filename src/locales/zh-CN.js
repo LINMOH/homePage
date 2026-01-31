@@ -18,7 +18,7 @@ export default {
   },
   about: {
     title: '01 / 关于我',
-    text: "我来自中国济南的一个小县城，是一名初三学生。在一个计算机教育资源相对匮乏的环境中成长，我很幸运能较早接触到电脑，这也开启了一段以自我驱动为主的探索之路，涉及编程、Linux、Web 开发以及计算机系统相关内容。<br />进入初中后，学业压力逐渐增大，我迎来了一个转折点。我不得不从“追求速度”和同龄比较中抽身，转而思考什么才是真正重要的事情。我开始更加重视可持续性——一种安静而坚定的信念：多年之后，我依然愿意坐在屏幕前，带着同样的热情去解决问题。<br />在这个过程中，我经历过迷茫与取舍。我尝试过信息学竞赛（OI），也向经验丰富的老师学习过，但最终选择了一条更符合自身节奏的道路。我不再把学习视为一场竞赛，而是一个由好奇心与自律驱动的长期过程。尽管所处环境依旧有限，但我的心态已经发生了改变。我开始更充分地利用自己已经拥有的资源——互联网、时间，以及一群志同道合的伙伴。我们一起构建、交流、成长。我仍在学习，仍在探索，也仍然走在路上。",
+    text: "我是一名来自济南的一个小县城的一名初三学生。小县城的计算机教育很匮乏，但是我很幸运，能较早接触到电脑，这也开启了一段我的探索之路。包括编程、Linux、Web 以及计算机科学等。<br />进入初中后，学业压力逐渐增大，我迎来了一个转折点。我不得不从“追求速度”和同龄比较中抽身，转而思考什么才是真正重要的事情。我开始更加重视可持续性——一种安静而坚定的信念：多年之后，我依然愿意坐在屏幕前，带着同样的热情去解决问题。<br />在这个过程中，我经历过迷茫与取舍。我尝试过信息学竞赛（OI），也向经验丰富的老师学习过，但最终选择了一条更符合自身节奏的道路。我不再把学习视为一场竞赛，而是一个由好奇心与自律驱动的长期过程。尽管所处环境依旧有限，但我的心态已经发生了改变。我开始更充分地利用自己已经拥有的资源——互联网、时间，以及一群志同道合的伙伴。我们一起构建、交流、成长。我仍在学习，仍在探索，也仍然走在路上。",
     stats: [
       {
         number: '15+',
@@ -176,8 +176,30 @@ export default {
       }
     ]
   },
+  team: {
+    title: '05 / 关于团队',
+    logo: '/taten.png',
+    text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 是一个由中国中学生自发组成的小型技术团队。团队诞生于计算机教育资源相对有限的环境中，成员的学习主要依靠自我探索、网络资源以及同伴协作。<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 并非围绕竞赛或短期目标建立，而是源于对计算机、软件与系统工作原理的共同好奇。团队成员通过项目实践与持续试验，探索编程语言、Linux 系统、Web 开发以及基础计算机科学概念提升自己。<br />随着学业压力的增加，团队逐渐调整了节奏与方向。相比速度与外部比较，<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 更加注重长期可持续的发展路径——稳步学习、夯实基础，并构建真正有意义或有趣的项目。进展有快有慢，但始终坚持。<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 依然是一个规模不大、资源有限的团队，但拥有强烈的内在驱动力。成员之间相互分享知识、讨论想法、审阅代码，共同成长。团队仍在演进，仍在学习，也仍在向前推进。",
+    stats: [
+      {
+        number: '13+',
+        label: '成员'
+      },
+      {
+        number: '12+',
+        label: '城市'
+      },
+      {
+        number: '20+',
+        label: '技术栈'
+      }
+    ]
+  },
+  friends: {
+    title: '06 / 友链'
+  },
   contact: {
-    title: '05 / 联系方式',
+    title: '07 / 联系方式',
     items: [
       {
         id: 'contact-1',
@@ -224,26 +246,7 @@ export default {
     ]
   },
   comments: {
-    title: '06 / 评论'
-  },
-  team: {
-    title: '05 / 关于团队',
-    logo: '/taten.png',
-    text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 是一个由中国中学生自发组成的小型技术团队。团队诞生于计算机教育资源相对有限的环境中，成员的学习主要依靠自我探索、网络资源以及同伴协作。<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 并非围绕竞赛或短期目标建立，而是源于对计算机、软件与系统工作原理的共同好奇。团队成员通过项目实践与持续试验，探索编程语言、Linux 系统、Web 开发以及基础计算机科学概念提升自己。<br />随着学业压力的增加，团队逐渐调整了节奏与方向。相比速度与外部比较，<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 更加注重长期可持续的发展路径——稳步学习、夯实基础，并构建真正有意义或有趣的项目。进展有快有慢，但始终坚持。<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 依然是一个规模不大、资源有限的团队，但拥有强烈的内在驱动力。成员之间相互分享知识、讨论想法、审阅代码，共同成长。团队仍在演进，仍在学习，也仍在向前推进——一个一个项目。",
-    stats: [
-      {
-        number: '13+',
-        label: '成员'
-      },
-      {
-        number: '12+',
-        label: '城市'
-      },
-      {
-        number: '20+',
-        label: '技术栈'
-      }
-    ]
+    title: '08 / 评论'
   },
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',

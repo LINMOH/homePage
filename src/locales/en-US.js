@@ -176,8 +176,30 @@ export default {
       }
     ]
   },
+  team: {
+    title: '05 / ABOUT TEAM',
+    logo: '/taten.png',
+    text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> is a small, student-led technical team formed by middle school students from China. The team began in an environment with limited access to formal computer science education, where most learning relied on self-exploration, online resources, and peer collaboration.<br />From the beginning, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> was not built around competition or short-term goals. Instead, it grew out of a shared curiosity about how computers, software, and systems actually work. Team members explored programming languages, Linux systems, web development, and basic computer science concepts through building projects and experimenting together.<br />As academic pressure increased, the team adjusted its pace and direction. Rather than pursuing speed or external comparison, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> chose a sustainable path — learning steadily, focusing on fundamentals, and building things that are genuinely useful or interesting. Progress has been uneven at times, but continuous.<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> remains a small team with limited resources, but strong internal motivation. Members share knowledge, discuss ideas, review each other's work, and grow together. The team is still evolving, still learning, and still moving forward — one project at a time.",
+    stats: [
+      {
+        number: '13+',
+        label: 'Members'
+      },
+      {
+        number: '12+',
+        label: 'Cities'
+      },
+      {
+        number: '20+',
+        label: 'Tech Stacks'
+      }
+    ]
+  },
+  friends: {
+    title: '06 / FRIENDS'
+  },
   contact: {
-    title: '05 / CONTACT',
+    title: '07  / CONTACT',
     items: [
       {
         id: 'contact-1',
@@ -224,26 +246,7 @@ export default {
     ]
   },
   comments: {
-    title: '06 / COMMENTS'
-  },
-  team: {
-    title: '05 / ABOUT TEAM',
-    logo: '/taten.png',
-    text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> is a small, student-led technical team formed by middle school students from China. The team began in an environment with limited access to formal computer science education, where most learning relied on self-exploration, online resources, and peer collaboration.<br />From the beginning, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> was not built around competition or short-term goals. Instead, it grew out of a shared curiosity about how computers, software, and systems actually work. Team members explored programming languages, Linux systems, web development, and basic computer science concepts through building projects and experimenting together.<br />As academic pressure increased, the team adjusted its pace and direction. Rather than pursuing speed or external comparison, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> chose a sustainable path — learning steadily, focusing on fundamentals, and building things that are genuinely useful or interesting. Progress has been uneven at times, but continuous.<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> remains a small team with limited resources, but strong internal motivation. Members share knowledge, discuss ideas, review each other's work, and grow together. The team is still evolving, still learning, and still moving forward — one project at a time.",
-    stats: [
-      {
-        number: '13+',
-        label: 'Members'
-      },
-      {
-        number: '12+',
-        label: 'Cities'
-      },
-      {
-        number: '20+',
-        label: 'Tech Stacks'
-      }
-    ]
+    title: '08 / COMMENTS'
   },
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',

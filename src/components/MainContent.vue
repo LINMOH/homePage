@@ -123,6 +123,31 @@
       </div>
     </section>
 
+    <!-- 友链部分 -->
+    <section id="friends" class="section">
+      <div class="section-header">
+        <h2 class="section-title">{{ content.friends.title }}</h2>
+      </div>
+      <div class="friends-grid">
+        <a
+          v-for="(friend, index) in friends"
+          :key="friend.id"
+          :href="friend.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="friend-card"
+        >
+          <div class="friend-meta">00{{ index + 1 }} / {{ friend.status || 'ACTIVE' }}</div>
+          <div class="friend-content">
+            <div class="friend-avatar">
+              <img :src="getPublicPath(friend.avatar)" :alt="friend.name" />
+            </div>
+            <h3 class="friend-name">{{ friend.name }}</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <!-- 联系方式部分 -->
     <section id="contact" class="section">
       <div class="section-header">
@@ -153,6 +178,7 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import { currentLanguage, getPublicPath } from '../locales';
 import { useGithubRepo } from '../api/github.js';
+import { friends } from '../data/friends.js';
 import zhCN from '../locales/zh-CN.js';
 import enUS from '../locales/en-US.js';
 import jaJP from '../locales/ja-JP.js';
@@ -551,6 +577,63 @@ onMounted(() => {
 
 .github-value {
   font-weight: 500;
+}
+
+/* 友链部分样式 */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0;
+}
+
+.friend-card {
+  padding: var(--pad-md);
+  border: 1px solid var(--border-color);
+  outline: 1px solid var(--border-color);
+  outline-offset: -1px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-xs);
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.friend-card:hover .friend-name {
+  color: var(--accent);
+}
+
+.friend-meta {
+  font-size: 10px;
+  color: var(--accent);
+  font-weight: bold;
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.friend-content {
+  display: flex;
+  align-items: center;
+  gap: var(--pad-sm);
+}
+
+.friend-avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.friend-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend-name {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  flex: 1;
 }
 
 /* 主内容区 */
