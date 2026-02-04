@@ -10,7 +10,13 @@ export default {
     userName: 'LIN MOHAN',
     userHandle: '@LINMOH',
     location: '中国・済南',
-    bio: '中学3年 / Computer Science'
+    bio: '中学3年 / Computer Science',
+    // 新しいナビゲーションボタン
+    navigation: {
+      home: 'ホーム',
+      log: 'ログ',
+      blog: 'ブログ'
+    }
   },
   hero: {
     title: 'BUILD.<br />THINK.<br />CREATE.',
@@ -251,5 +257,21 @@ export default {
   footer: {
     location: '緯度: 36.292° N / 経度: 116.4501° E',
     copyrightStartYear: '2023'
+  },
+  // 新しいページコンテンツ
+  log: {
+    title: 'ログ',
+    loading: '読み込み中...',
+    error: '読み込みに失敗しました。後でもう一度お試しください',
+    noIssues: 'まだ更新はありません',
+    viewOnGitHub: 'GitHubで見る'
+  },
+  blog: {
+    title: 'ブログ',
+    loading: '読み込み中...',
+    error: '読み込みに失敗しました。後でもう一度お試しください',
+    noPosts: 'まだブログ記事はありません',
+    readMore: '続きを読む',
+    backToList: 'リストに戻る'
   }
 }

@@ -10,7 +10,13 @@ export default {
     userName: 'LIN MOHAN',
     userHandle: '@LINMOH',
     location: '中国 · 济南',
-    bio: '初三 / 计算机科学'
+    bio: '初三 / 计算机科学',
+    // 新增导航按钮
+    navigation: {
+      home: '主页',
+      log: '动态',
+      blog: '博客'
+    }
   },
   hero: {
     title: 'BUILD.<br />THINK.<br />CREATE.',
@@ -251,5 +257,21 @@ export default {
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',
     copyrightStartYear: '2023'
+  },
+  // 新增页面内容
+  log: {
+    title: '动态',
+    loading: '加载中...',
+    error: '加载失败，请稍后重试',
+    noIssues: '暂无动态',
+    viewOnGitHub: '在 GitHub 查看'
+  },
+  blog: {
+    title: '博客',
+    loading: '加载中...',
+    error: '加载失败，请稍后重试',
+    noPosts: '暂无博客文章',
+    readMore: '阅读全文',
+    backToList: '返回列表'
   }
 }

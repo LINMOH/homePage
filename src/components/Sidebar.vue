@@ -7,6 +7,20 @@
         <p class="user-handle">{{ content.sidebar.userHandle }}</p>
       </div>
 
+      <!-- 导航按钮 -->
+      <nav class="sidebar-nav">
+        <button 
+          v-for="(navItem, index) in navItems" 
+          :key="navItem.id"
+          class="nav-button"
+          :class="{ 'active': activeNav === navItem.id }"
+          @click="switchPage(navItem.id)"
+        >
+          <span class="nav-number">0{{ index + 1 }}</span>
+          <span class="nav-label">{{ navItem.label }}</span>
+        </button>
+      </nav>
+
       <div class="sidebar-footer">
         <p class="location">{{ content.sidebar.location }}</p>
         <p class="bio">{{ content.sidebar.bio }}</p>
@@ -16,7 +30,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { currentLanguage, getPublicPath } from '../locales';
 import zhCN from '../locales/zh-CN.js';
 import enUS from '../locales/en-US.js';
@@ -28,6 +42,45 @@ const content = computed(() => {
   if (lang === 'zh') return zhCN;
   if (lang === 'jp') return jaJP;
   return enUS;
+});
+
+// 当前激活的导航项
+const activeNav = ref('home');
+
+// 导航项配置
+const navItems = computed(() => {
+  const navContent = content.value.sidebar.navigation || {};
+  return [
+    { id: 'home', label: navContent.home || 'Home' },
+    { id: 'log', label: navContent.log || 'Log' },
+    { id: 'blog', label: navContent.blog || 'Blog' }
+  ];
+});
+
+// 切换页面
+const switchPage = (pageId) => {
+  activeNav.value = pageId;
+  // 触发自定义事件，通知父组件切换页面
+  window.dispatchEvent(new CustomEvent('page-switch', { 
+    detail: { page: pageId }
+  }));
+};
+
+// 监听页面切换事件
+onMounted(() => {
+  // 从URL hash获取当前页面
+  const hash = window.location.hash.replace('#', '');
+  if (hash && ['', 'log', 'blog'].includes(hash)) {
+    activeNav.value = hash;
+  }
+  
+  // 监听hash变化
+  window.addEventListener('hashchange', () => {
+    const newHash = window.location.hash.replace('#', '');
+    if (newHash && ['home', 'log', 'blog'].includes(newHash)) {
+      activeNav.value = newHash;
+    }
+  });
 });
 </script>
 
@@ -54,6 +107,7 @@ const content = computed(() => {
 .avatar-section {
   margin-bottom: var(--pad-lg);
   padding-bottom: var(--pad-md);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .avatar {
@@ -76,6 +130,66 @@ const content = computed(() => {
   color: var(--text-sub);
   letter-spacing: 1px;
   font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 导航样式 */
+.sidebar-nav {
+  margin: var(--pad-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: var(--pad-sm);
+  padding: var(--pad-sm) var(--pad-md);
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-button:hover {
+  background: var(--bg);
+  border-left-color: var(--border-color);
+}
+
+.nav-button.active {
+  background: var(--bg);
+  border-left-color: var(--accent);
+}
+
+.nav-button.active .nav-number {
+  color: var(--accent);
+}
+
+.nav-button.active .nav-label {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.nav-number {
+  font-size: 10px;
+  color: var(--text-sub);
+  font-weight: bold;
+  min-width: 20px;
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-label {
+  font-size: 14px;
+  color: var(--text-sub);
+  transition: color 0.2s ease;
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-button:hover .nav-label {
+  color: var(--text-main);
 }
 
 .sidebar-footer {
@@ -111,6 +225,29 @@ const content = computed(() => {
   .sidebar-content {
     padding: var(--pad-md);
   }
+
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: center;
+    margin: var(--pad-md) 0;
+  }
+
+  .nav-button {
+    flex-direction: column;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: var(--pad-xs) var(--pad-sm);
+  }
+
+  .nav-button:hover {
+    border-left-color: transparent;
+    border-bottom-color: var(--border-color);
+  }
+
+  .nav-button.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent);
+  }
 }
 
 @media (max-width: 480px) {
@@ -121,6 +258,14 @@ const content = computed(() => {
 
   .user-name {
     font-size: 20px;
+  }
+
+  .nav-button {
+    padding: var(--pad-xs);
+  }
+
+  .nav-label {
+    font-size: 12px;
   }
 }
 </style>

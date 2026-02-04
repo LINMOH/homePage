@@ -10,7 +10,13 @@ export default {
     userName: 'LIN MOHAN',
     userHandle: '@LINMOH',
     location: 'JINAN, CHINA',
-    bio: 'Grade 9 / Computer Science'
+    bio: 'Grade 9 / Computer Science',
+    // New navigation buttons
+    navigation: {
+      home: 'Home',
+      log: 'Log',
+      blog: 'Blog'
+    }
   },
   hero: {
     title: 'BUILD.<br />THINK.<br />CREATE.',
@@ -251,5 +257,21 @@ export default {
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',
     copyrightStartYear: '2023'
+  },
+  // New page content
+  log: {
+    title: 'Log',
+    loading: 'Loading...',
+    error: 'Failed to load, please try again later',
+    noIssues: 'No updates yet',
+    viewOnGitHub: 'View on GitHub'
+  },
+  blog: {
+    title: 'Blog',
+    loading: 'Loading...',
+    error: 'Failed to load, please try again later',
+    noPosts: 'No blog posts yet',
+    readMore: 'Read more',
+    backToList: 'Back to list'
   }
 }
