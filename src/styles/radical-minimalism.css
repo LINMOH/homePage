@@ -1,4 +1,3 @@
-
 /* 
  * 激进扁平化 (Radical Flatness) - 核心设计系统
  * 这是一套冷酷的物理法则，剔除所有感官上的"肉感"，只保留逻辑的骨架
@@ -39,6 +38,12 @@
   /* 字重系统 - 极致对比 */
   --font-weight-regular: 400;
   --font-weight-bold: 900;
+
+  /* 滚动条尺寸 */
+  --scrollbar-width: 4px;
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: var(--border-color);
+  --scrollbar-thumb-hover: var(--accent);
 }
 
 /* 字体定义 */
@@ -73,6 +78,9 @@
   --accent-hover: #3A6BFF;
   --danger: #C63636;
   --success: #3FA36C;
+  /* 滚动条颜色 */
+  --scrollbar-thumb: #444444;
+  --scrollbar-thumb-hover: var(--accent);
 }
 
 /* 亮色主题 */
@@ -89,6 +97,9 @@
 
   /* 唯一强调色 - 克莱因蓝 */
   --accent: #002FA7;
+  /* 滚动条颜色 */
+  --scrollbar-thumb: var(--border-color);
+  --scrollbar-thumb-hover: var(--accent);
 }
 
 /* 铁律 1 & 4: 零维度与零装饰，强制直角 */
@@ -111,6 +122,37 @@ body {
   font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: grayscale;
   line-height: 1.6;
+}
+
+/* 自定义滚动条 - 符合激进扁平化设计理念 */
+/* 铁律 2: 发丝线原则 - 极细的滚动条 */
+/* 铁律 4: 几何形态 - 直角滚动条 */
+/* 铁律 3: 色彩限制 - 使用边框色和强调色 */
+
+/* Webkit浏览器 (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 /* 铁律 2: "发丝线"分割原则 */
