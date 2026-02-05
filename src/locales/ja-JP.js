@@ -8,7 +8,7 @@ export default {
   },
   sidebar: {
     userName: 'LIN MOHAN',
-    userHandle: '@LINMOH',
+    userHandle: 'Student Developer',
     location: '中国・済南',
     bio: '中学3年 / Computer Science',
     // 新しいナビゲーションボタン

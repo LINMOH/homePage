@@ -8,7 +8,7 @@ export default {
   },
   sidebar: {
     userName: 'LIN MOHAN',
-    userHandle: '@LINMOH',
+    userHandle: 'Student Developer',
     location: 'JINAN, CHINA',
     bio: 'Grade 9 / Computer Science',
     // New navigation buttons
@@ -27,16 +27,28 @@ export default {
     text: "I am a Grade 9 student from a small county in Jinan, China. Growing up where formal computer education was scarce, I was lucky to discover computers early. This sparked a self-driven journey through programming, Linux, web development, and systems architecture.<br />As my academic workload intensified in middle school, I faced a turning point. I had to move away from 'chasing speed' and competitive comparisons. Instead, I began to prioritize sustainability: the quiet confidence that I will still be sitting in front of a screen years from now, solving problems with the same passion.<br />Along the way, I've navigated confusion and trade-offs. I explored the Olympiad in Informatics (OI) and learned from mentors, but ultimately chose a path that fits my own pace. I no longer view learning as a race, but as a long-term process fueled by curiosity and discipline. While my environment remains resource-limited, my mindset has shifted. I now maximize what I have—the internet, my time, and a community of like-minded peers. We build, we exchange, and we grow together. I am still learning, still exploring, and very much still on my way.",
     stats: [
       {
-        number: '15+',
+        number: '15',
+        label: 'AGES'
+      },
+      {
+        number: '10+',
         label: 'PROJECTS'
       },
       {
-        number: '8+',
-        label: 'YEARS'
+        number: '7+',
+        label: 'CODING YEARS'
       },
       {
         number: '1000+',
         label: 'COMMITS'
+      },
+      {
+        number: '10000+',
+        label: 'HOURS CODING'
+      },
+      {
+        number: '500000+',
+        label: 'TOTAL VIEWS'
       }
     ]
   },

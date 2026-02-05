@@ -8,7 +8,7 @@ export default {
   },
   sidebar: {
     userName: 'LIN MOHAN',
-    userHandle: '@LINMOH',
+    userHandle: 'Student Developer',
     location: '中国 · 济南',
     bio: '初三 / 计算机科学',
     // 新增导航按钮
