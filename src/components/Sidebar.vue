@@ -104,12 +104,6 @@ onMounted(() => {
   height: 100%;
 }
 
-.avatar-section {
-  margin-bottom: var(--pad-lg);
-  padding-bottom: var(--pad-md);
-  border-bottom: 1px solid var(--border-color);
-}
-
 .avatar {
   width: 80px;
   height: 80px;
