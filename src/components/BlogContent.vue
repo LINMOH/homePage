@@ -450,6 +450,27 @@ const backToList = () => {
   opacity: 0.7;
 }
 
+/* 数学公式样式 */
+.post-body :deep(.math-inline) {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.post-body :deep(.math-block) {
+  text-align: center;
+  margin: var(--pad-md) 0;
+  padding: var(--pad-sm);
+  overflow-x: auto;
+}
+
+.post-body :deep(.MathJax) {
+  outline: none;
+}
+
+.post-body :deep(mjx-container) {
+  outline: none;
+}
+
 /* 响应式设计 */
 @media (max-width: 1024px) {
   .massive-title {

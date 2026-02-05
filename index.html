@@ -9,6 +9,57 @@
     <meta name="author" content="Lin Mohan" />
     <link rel="icon" type="image/x-icon" href="/avatar.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- MathJax for mathematical formulas -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          processEnvironments: true,
+          tags: 'ams'
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+          ignoreHtmlClass: 'no-mathjax'
+        },
+        startup: {
+          ready: () => {
+            // 当MathJax准备好时
+            MathJax.startup.defaultReady();
+            
+            // 初始渲染
+            if (MathJax.typesetPromise) {
+              MathJax.typesetPromise();
+            }
+            
+            // 监听DOM变化，重新渲染数学公式
+            const observer = new MutationObserver((mutations) => {
+              let shouldUpdate = false;
+              for (const mutation of mutations) {
+                if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                  shouldUpdate = true;
+                  break;
+                }
+              }
+              
+              if (shouldUpdate && MathJax.typesetPromise) {
+                // 延迟执行，确保Vue已经完成渲染
+                setTimeout(() => {
+                  MathJax.typesetPromise();
+                }, 100);
+              }
+            });
+            
+            observer.observe(document.body, {
+              childList: true,
+              subtree: true
+            });
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
   </head>
   <body>
     <div id="app"></div>

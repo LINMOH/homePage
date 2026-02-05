@@ -50,6 +50,37 @@ const md = new MarkdownIt({
   }
 });
 
+// --- 添加数学公式支持 ---
+// 更健壮的数学公式处理
+const originalRender = md.renderer.render;
+
+// 重写render方法，在渲染后处理数学公式
+md.renderer.render = function(tokens, options, env) {
+  let result = originalRender.call(this, tokens, options, env);
+  
+  // 处理行内数学公式：$...$
+  result = result.replace(/\$([^\$\n]+?)\$/g, (match, math) => {
+    // 转义特殊字符
+    math = math.replace(/&/g, '&amp;')
+               .replace(/</g, '&lt;')
+               .replace(/>/g, '&gt;')
+               .replace(/\"/g, '&quot;');
+    return `<span class="math-inline">\\(${math}\\)</span>`;
+  });
+  
+  // 处理块级数学公式：$$...$$
+  result = result.replace(/\$\$([\s\S]+?)\$\$/g, (match, math) => {
+    // 转义特殊字符
+    math = math.replace(/&/g, '&amp;')
+               .replace(/</g, '&lt;')
+               .replace(/>/g, '&gt;')
+               .replace(/\"/g, '&quot;');
+    return `<div class="math-block">\\[${math}\\]</div>`;
+  });
+  
+  return result;
+};
+
 // --- 获取所有 Markdown 文件 ---
 // 注意：路径必须以 /src 开头，不能使用别名 @
 const blogModules = import.meta.glob('/src/data/blogs/*.md', { query: '?raw', import: 'default' });

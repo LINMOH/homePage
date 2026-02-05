@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathJax Test</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          processEnvironments: true,
+          tags: 'ams'
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+          ignoreHtmlClass: 'no-mathjax'
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .math-inline {
+            display: inline-block;
+            margin: 0 2px;
+        }
+        .math-block {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .MathJax, mjx-container {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>MathJax 数学公式测试</h1>
+    
+    <h2>行内公式测试</h2>
+    <p>勾股定理: <span class="math-inline">\(a^2 + b^2 = c^2\)</span></p>
+    <p>二次方程: 当 <span class="math-inline">\(x = 2\)</span> 时，函数 <span class="math-inline">\(f(x) = x^2 + 3x - 5\)</span> 的值为 <span class="math-inline">\(f(2) = 2^2 + 3 \times 2 - 5 = 5\)</span></p>
+    
+    <h2>块级公式测试</h2>
+    <div class="math-block">\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</div>
+    
+    <div class="math-block">\[e^{i\pi} + 1 = 0\]</div>
+    
+    <div class="math-block">\[\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}\]</div>
+    
+    <h2>矩阵测试</h2>
+    <div class="math-block">\[
+    \begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+    \end{bmatrix}
+    \times
+    \begin{bmatrix}
+    b_{11} & b_{12} \\
+    b_{21} & b_{22}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    a_{11}b_{11} + a_{12}b_{21} & a_{11}b_{12} + a_{12}b_{22} \\
+    a_{21}b_{11} + a_{22}b_{21} & a_{21}b_{12} + a_{22}b_{22}
+    \end{bmatrix}
+    \]</div>
+    
+    <h2>测试说明</h2>
+    <p>如果上面的数学公式显示为渲染后的数学符号（而不是纯文本），说明MathJax配置成功。</p>
+    
+    <p>在博客系统中，数学公式会被自动转换为这种格式，然后由MathJax渲染。</p>
+</body>
+</html>
