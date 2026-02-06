@@ -20,12 +20,16 @@ export default {
   },
   hero: {
     title: 'BUILD.<br />THINK.<br />CREATE.',
-    subtitle: 'VER. 2026'
+    subtitle: 'A student who treats computing as a lifelong craft.'
   },
   about: {
     title: '01 / ABOUT',
     text: "I am a Grade 9 student from a small county in Jinan, China. Growing up where formal computer education was scarce, I was lucky to discover computers early. This sparked a self-driven journey through programming, Linux, web development, and systems architecture.<br />As my academic workload intensified in middle school, I faced a turning point. I had to move away from 'chasing speed' and competitive comparisons. Instead, I began to prioritize sustainability: the quiet confidence that I will still be sitting in front of a screen years from now, solving problems with the same passion.<br />Along the way, I've navigated confusion and trade-offs. I explored the Olympiad in Informatics (OI) and learned from mentors, but ultimately chose a path that fits my own pace. I no longer view learning as a race, but as a long-term process fueled by curiosity and discipline. While my environment remains resource-limited, my mindset has shifted. I now maximize what I have—the internet, my time, and a community of like-minded peers. We build, we exchange, and we grow together. I am still learning, still exploring, and very much still on my way.",
     stats: [
+      {
+        number: 'INTJ',
+        label: 'MBTI'
+      },
       {
         number: '15',
         label: 'AGES'
@@ -41,10 +45,6 @@ export default {
       {
         number: '1000+',
         label: 'COMMITS'
-      },
-      {
-        number: '10000+',
-        label: 'HOURS CODING'
       },
       {
         number: '500000+',
@@ -164,8 +164,43 @@ export default {
       }
     ]
   },
+  timeline: {
+    title: '04 / TIMELINE',
+    items: [
+      {
+        id: 'timeline-1',
+        age: 'Age 6 / 2016',
+        event: 'Discovered Computers',
+        description: 'First exposure to computers'
+      },
+      {
+        id: 'timeline-2',
+        age: 'Age 8 / 2018',
+        event: 'Started Programming',
+        description: 'Began to learn Python'
+      },
+      {
+        id: 'timeline-3',
+        age: 'Age 13 / 2023',
+        event: 'Launched My First Website',
+        description: 'Created first personal website using HTML and CSS'
+      },
+      {
+        id: 'timeline-4',
+        age: 'Age 15 / 2025',
+        event: 'Formed TATEN',
+        description: 'Co-founded TATEN programming team with friends'
+      },
+      {
+        id: 'timeline-5',
+        age: '',
+        event: 'In the Future',
+        description: 'Concentrate on computer science and schoolwork'
+      }
+    ]
+  },
   projects: {
-    title: '04 / PROJECTS',
+    title: '05 / PROJECTS',
     items: [
       {
         id: 'project-1',
@@ -195,7 +230,7 @@ export default {
     ]
   },
   team: {
-    title: '05 / ABOUT TEAM',
+    title: '06 / ABOUT TEAM',
     logo: '/taten.png',
     text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> is a small, student-led technical team formed by middle school students from China. The team began in an environment with limited access to formal computer science education, where most learning relied on self-exploration, online resources, and peer collaboration.<br />From the beginning, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> was not built around competition or short-term goals. Instead, it grew out of a shared curiosity about how computers, software, and systems actually work. Team members explored programming languages, Linux systems, web development, and basic computer science concepts through building projects and experimenting together.<br />As academic pressure increased, the team adjusted its pace and direction. Rather than pursuing speed or external comparison, <a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> chose a sustainable path — learning steadily, focusing on fundamentals, and building things that are genuinely useful or interesting. Progress has been uneven at times, but continuous.<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> remains a small team with limited resources, but strong internal motivation. Members share knowledge, discuss ideas, review each other's work, and grow together. The team is still evolving, still learning, and still moving forward — one project at a time.",
     stats: [
@@ -214,10 +249,10 @@ export default {
     ]
   },
   friends: {
-    title: '06 / FRIENDS'
+    title: '07 / FRIENDS'
   },
   contact: {
-    title: '07  / CONTACT',
+    title: '08  / CONTACT',
     items: [
       {
         id: 'contact-1',
@@ -264,7 +299,7 @@ export default {
     ]
   },
   comments: {
-    title: '08 / COMMENTS'
+    title: '09 / COMMENTS'
   },
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',

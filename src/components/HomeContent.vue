@@ -67,6 +67,30 @@
       </div>
     </section>
 
+    <!-- 时间线部分 -->
+    <section id="timeline" class="section">
+      <div class="section-header">
+        <h2 class="section-title">{{ content.timeline.title }}</h2>
+      </div>
+      <div class="timeline-container">
+        <div 
+          v-for="(item, index) in content.timeline.items" 
+          :key="item.id" 
+          class="timeline-item"
+          :class="{ 'timeline-item-right': index % 2 === 0 }"
+        >
+          <div class="timeline-marker">
+            <div class="timeline-number">{{ String(index + 1).padStart(2, '0') }}</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-age">{{ item.age }}</div>
+            <h3 class="timeline-event">{{ item.event }}</h3>
+            <p class="timeline-desc">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 项目部分 -->
     <section id="projects" class="section">
       <div class="section-header">
@@ -636,6 +660,95 @@ onMounted(() => {
   flex: 1;
 }
 
+/* 时间线部分样式 */
+.timeline-container {
+  padding: var(--pad-lg);
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-color);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--pad-xl);
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-item-right {
+  flex-direction: row-reverse;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border: 1px solid var(--border-color);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent);
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.timeline-content {
+  width: calc(50% - 40px);
+  padding: var(--pad-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.timeline-age {
+  font-size: 10px;
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: var(--pad-xs);
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.timeline-event {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: var(--pad-xs);
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--text-sub);
+  line-height: 1.6;
+  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+}
+
 /* 主内容区 */
 .content {
   flex: 1;
@@ -658,6 +771,21 @@ onMounted(() => {
 
   .skill-item:nth-child(even) {
     border-right: 1px solid var(--border-color);
+  }
+  
+  /* 时间线响应式 */
+  .timeline-container::before {
+    left: 30px;
+  }
+  
+  .timeline-marker {
+    left: 30px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 80px);
+    margin-left: 60px !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -685,6 +813,25 @@ onMounted(() => {
   .skill-item:nth-child(even) {
     border-right: none;
   }
+  
+  /* 时间线响应式 */
+  .timeline-container {
+    padding: var(--pad-md);
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 50px !important;
+    padding: var(--pad-sm);
+  }
+  
+  .timeline-event {
+    font-size: 16px;
+  }
+  
+  .timeline-desc {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -706,6 +853,35 @@ onMounted(() => {
 
   .skill-name {
     font-size: 16px;
+  }
+  
+  /* 时间线响应式 */
+  .timeline-container::before {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    left: 20px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 50px);
+    margin-left: 40px !important;
+    padding: var(--pad-xs);
+  }
+  
+  .timeline-number {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+  
+  .timeline-event {
+    font-size: 14px;
+  }
+  
+  .timeline-desc {
+    font-size: 12px;
   }
 }
 </style>

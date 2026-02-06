@@ -164,8 +164,43 @@ export default {
       }
     ]
   },
+  timeline: {
+    title: '04 / TIMELINE',
+    items: [
+      {
+        "id": "timeline-1",
+        "age": "6歳 / 2016年",
+        "event": "コンピューターとの出会い",
+        "description": "初めてコンピューターに触れる"
+      },
+      {
+        "id": "timeline-2",
+        "age": "8歳 / 2018年",
+        "event": "プログラミングを始める",
+        "description": "Pythonの学習を開始"
+      },
+      {
+        "id": "timeline-3",
+        "age": "13歳 / 2023年",
+        "event": "初めてのウェブサイトを公開",
+        "description": "HTMLとCSSを使って最初の個人サイトを制作"
+      },
+      {
+        "id": "timeline-4",
+        "age": "15歳 / 2025年",
+        "event": "TATENを結成",
+        "description": "友人と共にTATENプログラミングチームを共同設立"
+      },
+      {
+        "id": "timeline-5",
+        "age": "",
+        "event": "これから",
+        "description": "コンピューターサイエンスと学業に専念する"
+      }
+    ]
+  },
   projects: {
-    title: '04 / PROJECTS',
+    title: '05 / PROJECTS',
     items: [
       {
         id: 'project-1',
@@ -195,7 +230,7 @@ export default {
     ]
   },
   team: {
-    title: '05 / ABOUT TEAM',
+    title: '06 / ABOUT TEAM',
     logo: '/taten.png',
     text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は、中国の中学生によって結成された小規模な学生主体の技術チームです。正式なコンピュータサイエンス教育へのアクセスが限られた環境の中で、学習の多くは自己探求、オンライン資源、そして仲間同士の協力に依存していました。<br />当初から、<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は競争や短期的な成果を目的としていませんでした。コンピュータやソフトウェア、システムが実際にどのように動いているのかという純粋な好奇心から生まれたチームです。メンバーはプロジェクト制作や実験を通じて、プログラミング言語、Linux、Web開発、計算機科学の基礎を学んできました。<br />学業のプレッシャーが高まる中で、チームはペースと方向性を調整しました。スピードや外部との比較ではなく、持続可能な学習、基礎重視、本当に有用で面白いものを作ることを選びました。進捗は均一ではありませんが、着実に続いています。<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は資源の限られた小さなチームですが、内発的なモチベーションは非常に強いです。知識を共有し、議論し、互いの成果をレビューしながら共に成長しています。チームは今も進化の途中であり、学び続け、一歩ずつ前に進んでいます。",
     stats: [
@@ -214,10 +249,10 @@ export default {
     ]
   },
   friends: {
-    title: '06 / 友達リンク'
+    title: '07 / 友達リンク'
   },
   contact: {
-    title: '07 / CONTACT',
+    title: '08 / CONTACT',
     items: [
       {
         id: 'contact-1',
@@ -264,7 +299,7 @@ export default {
     ]
   },
   comments: {
-    title: '08 / コメント'
+    title: '09 / コメント'
   },
   footer: {
     location: '緯度: 36.292° N / 経度: 116.4501° E',
