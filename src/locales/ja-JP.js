@@ -146,7 +146,7 @@ export default {
         title: 'TATEN Website',
         description: 'TATENプログラミングチーム公式サイト',
         status: 'ACTIVE',
-        link: 'https://taten.xyz'
+        link: 'https://taten.org'
       },
       {
         id: 'website-2',
@@ -232,7 +232,7 @@ export default {
   team: {
     title: '06 / ABOUT TEAM',
     logo: '/taten.png',
-    text: "<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は、中国の中学生によって結成された小規模な学生主体の技術チームです。正式なコンピュータサイエンス教育へのアクセスが限られた環境の中で、学習の多くは自己探求、オンライン資源、そして仲間同士の協力に依存していました。<br />当初から、<a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は競争や短期的な成果を目的としていませんでした。コンピュータやソフトウェア、システムが実際にどのように動いているのかという純粋な好奇心から生まれたチームです。メンバーはプロジェクト制作や実験を通じて、プログラミング言語、Linux、Web開発、計算機科学の基礎を学んできました。<br />学業のプレッシャーが高まる中で、チームはペースと方向性を調整しました。スピードや外部との比較ではなく、持続可能な学習、基礎重視、本当に有用で面白いものを作ることを選びました。進捗は均一ではありませんが、着実に続いています。<br /><a href='https://taten.xyz/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は資源の限られた小さなチームですが、内発的なモチベーションは非常に強いです。知識を共有し、議論し、互いの成果をレビューしながら共に成長しています。チームは今も進化の途中であり、学び続け、一歩ずつ前に進んでいます。",
+    text: "<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は、中国の中学生によって結成された小規模な学生主体の技術チームです。正式なコンピュータサイエンス教育へのアクセスが限られた環境の中で、学習の多くは自己探求、オンライン資源、そして仲間同士の協力に依存していました。<br />当初から、<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は競争や短期的な成果を目的としていませんでした。コンピュータやソフトウェア、システムが実際にどのように動いているのかという純粋な好奇心から生まれたチームです。メンバーはプロジェクト制作や実験を通じて、プログラミング言語、Linux、Web開発、計算機科学の基礎を学んできました。<br />学業のプレッシャーが高まる中で、チームはペースと方向性を調整しました。スピードや外部との比較ではなく、持続可能な学習、基礎重視、本当に有用で面白いものを作ることを選びました。進捗は均一ではありませんが、着実に続いています。<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は資源の限られた小さなチームですが、内発的なモチベーションは非常に強いです。知識を共有し、議論し、互いの成果をレビューしながら共に成長しています。チームは今も進化の途中であり、学び続け、一歩ずつ前に進んでいます。",
     stats: [
       {
         number: '13+',
