@@ -1,0 +1,95 @@
+"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Content Test</title>
+    <style>
+        :root {
+            --bg: #FFFFFF;
+            --text-main: #000000;
+            --text-sub: #666666;
+            --border-color: #EAEAEA;
+            --accent: #002FA7;
+            --space-unit: 8px;
+            --pad-xs: calc(var(--space-unit) * 1);
+            --pad-sm: calc(var(--space-unit) * 2);
+            --pad-md: calc(var(--space-unit) * 4);
+            --pad-lg: calc(var(--space-unit) * 10);
+            --pad-xl: calc(var(--space-unit) * 15);
+            --font-family: "Verdena", "Helvetica Neue", Arial, sans-serif;
+            --font-family-heading: "Futura", "Helvetica Neue", Arial, sans-serif;
+            --font-size-xs: 10px;
+            --font-size-sm: 12px;
+            --font-size-base: 14px;
+            --font-size-lg: 24px;
+            --font-size-xl: 48px;
+            --font-size-xxl: 120px;
+            --font-weight-regular: 400;
+            --font-weight-bold: 900;
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: var(--font-family-heading);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--pad-lg);
+        }
+        
+        .test-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--pad-lg);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--pad-md);
+        }
+        
+        .test-info {
+            font-size: var(--font-size-base);
+            color: var(--text-sub);
+            margin-bottom: var(--pad-lg);
+            line-height: 1.6;
+        }
+        
+        .test-link {
+            display: inline-block;
+            padding: var(--pad-sm) var(--pad-md);
+            background: var(--text-main);
+            color: var(--bg);
+            text-decoration: none;
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-sm);
+            margin-top: var(--pad-md);
+        }
+        
+        .test-link:hover {
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="test-title">DeviceContent.vue 组件测试</h1>
+        <div class="test-info">
+            <p>DeviceContent.vue 组件已成功集成到 HomeContent.vue 页面中，并已进行美化。</p>
+            <p>主要美化改进：</p>
+            <ul>
+                <li>使用项目的 CSS 变量系统（--bg, --text-main, --accent 等）</li>
+                <li>应用激进扁平化设计风格</li>
+                <li>网格系统使用纯二维框线设计</li>
+                <li>响应式布局优化</li>
+                <li>悬停效果使用强调色</li>
+            </ul>
+            <p>请访问 <a href="http://localhost:5174" style="color: var(--accent);">http://localhost:5174</a> 查看实际效果。</p>
+        </div>
+        <a href="http://localhost:5174" class="test-link">查看美化后的设备页面</a>
+    </div>
+</body>
+</html>"

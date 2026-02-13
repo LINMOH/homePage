@@ -230,7 +230,7 @@ export default {
     ]
   },
   team: {
-    title: '06 / 关于团队',
+    title: '07 / 关于团队',
     logo: '/taten.png',
     text: "<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 是一个由中国中学生自发组成的小型技术团队。团队诞生于计算机教育资源相对有限的环境中，成员的学习主要依靠自我探索、网络资源以及同伴协作。<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 并非围绕竞赛或短期目标建立，而是源于对计算机、软件与系统工作原理的共同好奇。团队成员通过项目实践与持续试验，探索编程语言、Linux 系统、Web 开发以及基础计算机科学概念提升自己。<br />随着学业压力的增加，团队逐渐调整了节奏与方向。相比速度与外部比较，<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 更加注重长期可持续的发展路径——稳步学习、夯实基础，并构建真正有意义或有趣的项目。进展有快有慢，但始终坚持。<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> 依然是一个规模不大、资源有限的团队，但拥有强烈的内在驱动力。成员之间相互分享知识、讨论想法、审阅代码，共同成长。团队仍在演进，仍在学习，也仍在向前推进。",
     stats: [
@@ -249,10 +249,60 @@ export default {
     ]
   },
   friends: {
-    title: '07 / 友链'
+    title: '08 / 友链'
+  },
+  device: {
+    title: '06 / 设备',
+    computer: {
+      title: '计算机系统',
+      specs: [
+        { label: 'CPU', value: 'Intel Core Ultra 265K' },
+        { label: 'GPU', value: 'NVIDIA GeForce RTX 5070' },
+        { label: '内存', value: '32GB DDR5' },
+        { label: '存储', value: '2TB NVMe SSD' }
+      ]
+    },
+    peripherals: {
+      title: '外设设备',
+      specs: [
+        { label: '键盘', value: 'Logitech Alto Keys K98M' },
+        { label: '鼠标', value: 'Logitech G304' },
+        { label: '显示器', value: 'LG 27" 4K + KTC 24"' },
+        { label: '音频', value: '内置扬声器' }
+      ]
+    },
+    software: {
+      title: '软件环境',
+      specs: [
+        { label: 'IDE', value: 'VS Code' },
+        { label: '浏览器', value: 'Chrome' },
+        { label: '终端', value: 'Windows Terminal' },
+        { label: '版本控制', value: 'Git' }
+      ]
+    },
+    os: {
+      title: '操作系统',
+      specs: [
+        { label: '主系统', value: 'Windows 11' },
+        { label: '次系统', value: 'Arch Linux' },
+        { label: 'Shell', value: 'Bash / PowerShell' },
+        { label: '虚拟化', value: 'WSL2 / Docker' }
+      ]
+    },
+    connection: {
+      title: '设备连接图',
+      nodes: [
+        { icon: '💻', label: '计算机' },
+        { icon: '⌨️', label: '键盘' },
+        { icon: '🖱️', label: '鼠标' },
+        { icon: '🖥️', label: '显示器' },
+        { icon: '🔊', label: '音频' },
+        { icon: '🌐', label: '网络' }
+      ]
+    }
   },
   contact: {
-    title: '08 / 联系方式',
+    title: '09 / 联系方式',
     items: [
       {
         id: 'contact-1',
@@ -299,7 +349,7 @@ export default {
     ]
   },
   comments: {
-    title: '09 / 评论'
+    title: '10 / 评论'
   },
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',

@@ -230,7 +230,7 @@ export default {
     ]
   },
   team: {
-    title: '06 / ABOUT TEAM',
+    title: '07 / ABOUT TEAM',
     logo: '/taten.png',
     text: "<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は、中国の中学生によって結成された小規模な学生主体の技術チームです。正式なコンピュータサイエンス教育へのアクセスが限られた環境の中で、学習の多くは自己探求、オンライン資源、そして仲間同士の協力に依存していました。<br />当初から、<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は競争や短期的な成果を目的としていませんでした。コンピュータやソフトウェア、システムが実際にどのように動いているのかという純粋な好奇心から生まれたチームです。メンバーはプロジェクト制作や実験を通じて、プログラミング言語、Linux、Web開発、計算機科学の基礎を学んできました。<br />学業のプレッシャーが高まる中で、チームはペースと方向性を調整しました。スピードや外部との比較ではなく、持続可能な学習、基礎重視、本当に有用で面白いものを作ることを選びました。進捗は均一ではありませんが、着実に続いています。<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は資源の限られた小さなチームですが、内発的なモチベーションは非常に強いです。知識を共有し、議論し、互いの成果をレビューしながら共に成長しています。チームは今も進化の途中であり、学び続け、一歩ずつ前に進んでいます。",
     stats: [
@@ -249,10 +249,49 @@ export default {
     ]
   },
   friends: {
-    title: '07 / 友達リンク'
+    title: '08 / 友達リンク'
+  },
+  device: {
+    title: '06 / デバイス',
+    computer: {
+      title: 'コンピューターシステム',
+      specs: [
+        { label: 'CPU', value: 'Intel Core Ultra 265K' },
+        { label: 'GPU', value: 'NVIDIA GeForce RTX 5070' },
+        { label: 'RAM', value: '64GB DDR5' },
+        { label: 'ストレージ', value: '7TB NVMe SSD' }
+      ]
+    },
+    peripherals: {
+      title: '周辺機器',
+      specs: [
+        { label: 'キーボード', value: 'Logitech Alto Keys K98M' },
+        { label: 'マウス', value: 'Logitech G304' },
+        { label: 'モニター', value: 'LG 27" 4K + KTC 24"' },
+        { label: 'オーディオ', value: 'Audio-Technica AT2040' }
+      ]
+    },
+    software: {
+      title: 'ソフトウェア',
+      specs: [
+        { label: 'エディター', value: 'VS Code' },
+        { label: 'ブラウザ', value: 'Chrome' },
+        { label: 'ターミナル', value: 'Konsole' },
+        { label: 'バージョン管理', value: 'Git' }
+      ]
+    },
+    os: {
+      title: 'オペレーティングシステム',
+      specs: [
+        { label: 'プライマリ', value: 'Windows 11' },
+        { label: 'セカンダリ', value: 'Arch Linux' },
+        { label: 'シェル', value: 'Bash / PowerShell' },
+        { label: '仮想化', value: 'Docker' }
+      ]
+    }
   },
   contact: {
-    title: '08 / CONTACT',
+    title: '09 / CONTACT',
     items: [
       {
         id: 'contact-1',
@@ -299,7 +338,7 @@ export default {
     ]
   },
   comments: {
-    title: '09 / コメント'
+    title: '10 / コメント'
   },
   footer: {
     location: '緯度: 36.292° N / 経度: 116.4501° E',

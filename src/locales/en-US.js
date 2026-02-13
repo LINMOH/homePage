@@ -1,3 +1,4 @@
+
 export default {
   site: {
     name: 'LIN MOHAN',
@@ -230,7 +231,7 @@ export default {
     ]
   },
   team: {
-    title: '06 / ABOUT TEAM',
+    title: '07 / ABOUT TEAM',
     logo: '/taten.png',
     text: "<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> is a small, student-led technical team formed by middle school students from China. The team began in an environment with limited access to formal computer science education, where most learning relied on self-exploration, online resources, and peer collaboration.<br />From the beginning, <a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> was not built around competition or short-term goals. Instead, it grew out of a shared curiosity about how computers, software, and systems actually work. Team members explored programming languages, Linux systems, web development, and basic computer science concepts through building projects and experimenting together.<br />As academic pressure increased, the team adjusted its pace and direction. Rather than pursuing speed or external comparison, <a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> chose a sustainable path — learning steadily, focusing on fundamentals, and building things that are genuinely useful or interesting. Progress has been uneven at times, but continuous.<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> remains a small team with limited resources, but strong internal motivation. Members share knowledge, discuss ideas, review each other's work, and grow together. The team is still evolving, still learning, and still moving forward — one project at a time.",
     stats: [
@@ -249,10 +250,49 @@ export default {
     ]
   },
   friends: {
-    title: '07 / FRIENDS'
+    title: '08 / FRIENDS'
+  },
+  device: {
+    title: '06 / DEVICE',
+    computer: {
+      title: 'COMPUTER SYSTEM',
+      specs: [
+        { label: 'CPU', value: 'Intel Core Ultra 265K' },
+        { label: 'GPU', value: 'NVIDIA GeForce RTX 5070' },
+        { label: 'RAM', value: '64GB DDR5' },
+        { label: 'STORAGE', value: '7TB NVMe SSD' }
+      ]
+    },
+    peripherals: {
+      title: 'PERIPHERALS',
+      specs: [
+        { label: 'KEYBOARD', value: 'Logitech Alto Keys K98M' },
+        { label: 'MOUSE', value: 'Logitech G304' },
+        { label: 'MONITOR', value: 'LG 27" 4K + KTC 24"' },
+        { label: 'AUDIO', value: 'Audio-Technica AT2040' }
+      ]
+    },
+    software: {
+      title: 'SOFTWARE',
+      specs: [
+        { label: 'EDITOR', value: 'VS Code' },
+        { label: 'BROWSER', value: 'Chrome' },
+        { label: 'TERMINAL', value: 'Konsole' },
+        { label: 'VERSION CONTROL', value: 'Git' }
+      ]
+    },
+    os: {
+      title: 'OPERATING SYSTEMS',
+      specs: [
+        { label: 'PRIMARY', value: 'Windows 11' },
+        { label: 'SECONDARY', value: 'Arch Linux' },
+        { label: 'SHELL', value: 'Bash / PowerShell' },
+        { label: 'VIRTUALIZATION', value: 'Docker' }
+      ]
+    }
   },
   contact: {
-    title: '08  / CONTACT',
+    title: '09 / CONTACT',
     items: [
       {
         id: 'contact-1',
@@ -299,7 +339,7 @@ export default {
     ]
   },
   comments: {
-    title: '09 / COMMENTS'
+    title: '10 / COMMENTS'
   },
   footer: {
     location: 'LATITUDE: 36.292° N / LONGITUDE: 116.4501° E',

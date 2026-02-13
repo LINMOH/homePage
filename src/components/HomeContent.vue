@@ -126,6 +126,9 @@
       </div>
     </section>
 
+    <!-- 设备部分 -->
+    <DeviceContent />
+
     <!-- 团队部分 -->
     <section id="team" class="section" ref="teamSectionRef">
       <div class="section-header">
@@ -207,6 +210,7 @@ import zhCN from '../locales/zh-CN.js';
 import enUS from '../locales/en-US.js';
 import jaJP from '../locales/ja-JP.js';
 import GiscusComments from './GiscusComments.vue';
+import DeviceContent from './DeviceContent.vue';
 
 // 根据当前语言获取内容
 const content = computed(() => {
