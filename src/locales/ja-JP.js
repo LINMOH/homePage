@@ -1,13 +1,13 @@
 export default {
   site: {
-    name: 'LIN MOHAN',
-    title: 'Lin Mohan - 個人ホームページ',
-    description: 'コンピュータサイエンスとWeb開発に情熱を注ぐ中学3年生・Lin Mohanの個人ホームページ。',
-    keywords: 'Lin Mohan, ポートフォリオ, ホームページ, Web開発, プログラミング',
+    name: 'Bcamy',
+    title: 'Bcamy - 個人ホームページ',
+    description: 'コンピュータサイエンスとWeb開発に情熱を注ぐ中学3年生・Bcamyの個人ホームページ。',
+    keywords: 'Bcamy, ポートフォリオ, ホームページ, Web開発, プログラミング',
     logo: '/avatar.png'
   },
   sidebar: {
-    userName: 'LIN MOHAN',
+    userName: 'Bcamy',
     userHandle: 'Student Developer',
     location: '中国・済南',
     bio: '中学3年 / Computer Science',

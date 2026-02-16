@@ -1,14 +1,14 @@
 
 export default {
   site: {
-    name: 'LIN MOHAN',
-    title: 'Lin Mohan - Personal Homepage',
-    description: 'Personal homepage of Lin Mohan, a Grade 9 student passionate about computer science and web development.',
-    keywords: 'Lin Mohan, portfolio, homepage, web development, programming',
+    name: 'Bcamy',
+    title: 'Bcamy - Personal Homepage',
+    description: 'Personal homepage of Bcamy, a Grade 9 student passionate about computer science and web development.',
+    keywords: 'Bcamy, portfolio, homepage, web development, programming',
     logo: '/avatar.png'
   },
   sidebar: {
-    userName: 'LIN MOHAN',
+    userName: 'Bcamy',
     userHandle: 'Student Developer',
     location: 'JINAN, CHINA',
     bio: 'Grade 9 / Computer Science',

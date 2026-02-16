@@ -1,13 +1,13 @@
 export default {
   site: {
-    name: 'LIN MOHAN',
-    title: 'Lin Mohan - Personal Homepage',
-    description: 'Lin Mohan 的个人主页，一名对计算机科学与 Web 开发充满热情的初三学生。',
+    name: 'Bcamy',
+    title: 'Bcamy - Personal Homepage',
+    description: 'Bcamy 的个人主页，一名对计算机科学与 Web 开发充满热情的初三学生。',
     keywords: '林墨瀚, 个人主页, 作品集, Web 开发, 编程',
     logo: '/avatar.png'
   },
   sidebar: {
-    userName: 'LIN MOHAN',
+    userName: 'Bcamy',
     userHandle: 'Student Developer',
     location: '中国 · 济南',
     bio: '初三 / 计算机科学',
