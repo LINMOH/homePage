@@ -1,4 +1,5 @@
-<template>
+
++<template>
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="avatar-section">
@@ -59,6 +60,12 @@ const navItems = computed(() => {
 
 // 切换页面
 const switchPage = (pageId) => {
+  if (pageId === 'blog') {
+    // 跳转到外部链接
+    window.open('https://linmohan.fun/', '_blank');
+    return;
+  }
+  
   activeNav.value = pageId;
   // 触发自定义事件，通知父组件切换页面
   window.dispatchEvent(new CustomEvent('page-switch', { 
