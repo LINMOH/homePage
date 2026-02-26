@@ -125,7 +125,7 @@ export default {
         title: 'My Blog',
         description: '技術と日常についての個人ブログ',
         status: 'ACTIVE',
-        link: 'https://blog.linmohan.fun'
+        link: 'https://linmohan.fun'
       },
       {
         id: 'website-4',
