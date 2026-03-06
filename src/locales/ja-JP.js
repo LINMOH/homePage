@@ -13,7 +13,7 @@ export default {
     bio: 'Grade 9 · Computer Science',
     navigation: {
       home: 'Home',
-      log: 'Activity',
+      log: 'Log',
       blog: 'Blog'
     }
   },
