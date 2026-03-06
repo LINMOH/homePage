@@ -123,14 +123,14 @@ onMounted(() => {
   font-weight: 900;
   margin-bottom: 4px;
   letter-spacing: -1px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .user-handle {
   font-size: 12px;
   color: var(--text-sub);
   letter-spacing: 1px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 导航样式 */
@@ -152,7 +152,7 @@ onMounted(() => {
   cursor: pointer;
   text-align: left;
   transition: all 0.2s ease;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .nav-button:hover {
@@ -179,14 +179,14 @@ onMounted(() => {
   color: var(--text-sub);
   font-weight: bold;
   min-width: 20px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .nav-label {
   font-size: 14px;
   color: var(--text-sub);
   transition: color 0.2s ease;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .nav-button:hover .nav-label {
@@ -202,14 +202,14 @@ onMounted(() => {
   color: var(--text-sub);
   letter-spacing: 1px;
   margin-bottom: 4px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .bio {
   font-size: 10px;
   color: var(--text-sub);
   letter-spacing: 0.5px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 响应式设计 */

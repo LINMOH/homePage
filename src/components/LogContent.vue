@@ -143,14 +143,14 @@ onMounted(() => {
   font-weight: 900;
   letter-spacing: -5px;
   margin-bottom: 40px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .subtitle {
   font-size: 14px;
   letter-spacing: 4px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 加载状态 */
@@ -198,7 +198,7 @@ onMounted(() => {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .retry-btn:hover {
@@ -234,20 +234,20 @@ onMounted(() => {
   font-size: 10px;
   color: var(--accent);
   font-weight: bold;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-date {
   font-size: 10px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-title {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: var(--pad-xs);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-info {
@@ -256,7 +256,7 @@ onMounted(() => {
   gap: var(--pad-sm);
   font-size: 12px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-user {
@@ -294,7 +294,7 @@ onMounted(() => {
 .log-body :deep(h1),
 .log-body :deep(h2),
 .log-body :deep(h3) {
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
   margin: var(--pad-md) 0 var(--pad-sm) 0;
   font-weight: 800;
 }
@@ -313,14 +313,14 @@ onMounted(() => {
 
 .log-body :deep(p) {
   margin-bottom: var(--pad-sm);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-body :deep(ul),
 .log-body :deep(ol) {
   margin-bottom: var(--pad-sm);
   padding-left: var(--pad-md);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-body :deep(li) {
@@ -333,7 +333,7 @@ onMounted(() => {
   margin: var(--pad-sm) 0;
   color: var(--text-sub);
   font-style: italic;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-body :deep(code) {
@@ -381,7 +381,7 @@ onMounted(() => {
   font-size: 12px;
   color: var(--accent);
   text-decoration: none;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .log-link:hover {
@@ -391,7 +391,7 @@ onMounted(() => {
 .log-full-date {
   font-size: 10px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 响应式设计 */

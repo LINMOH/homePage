@@ -124,14 +124,14 @@ const backToList = () => {
   font-weight: 900;
   letter-spacing: -5px;
   margin-bottom: 40px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .subtitle {
   font-size: 14px;
   letter-spacing: 4px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 加载状态 */
@@ -185,7 +185,7 @@ const backToList = () => {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .retry-btn:hover {
@@ -204,7 +204,7 @@ const backToList = () => {
   font-weight: 800;
   letter-spacing: -1px;
   color: var(--bg);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .posts-grid {
@@ -248,20 +248,20 @@ const backToList = () => {
   font-size: 10px;
   color: var(--accent);
   font-weight: bold;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-date {
   font-size: 10px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-title {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: var(--pad-xs);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-excerpt {
@@ -269,7 +269,7 @@ const backToList = () => {
   line-height: 1.6;
   color: var(--text-sub);
   margin-bottom: var(--pad-sm);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-tags {
@@ -284,7 +284,7 @@ const backToList = () => {
   color: var(--text-sub);
   padding: 2px 6px;
   border: 1px solid var(--border-color);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-footer {
@@ -296,7 +296,7 @@ const backToList = () => {
 .read-more {
   font-size: 12px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
   transition: color 0.2s ease;
 }
 
@@ -320,7 +320,7 @@ const backToList = () => {
   color: var(--accent);
   font-size: 14px;
   cursor: pointer;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
   padding: var(--pad-xs) var(--pad-sm);
   border: 1px solid var(--border-color);
 }
@@ -334,7 +334,7 @@ const backToList = () => {
   gap: var(--pad-md);
   font-size: 12px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-content {
@@ -347,7 +347,7 @@ const backToList = () => {
   font-weight: 900;
   margin-bottom: var(--pad-md);
   line-height: 1.1;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-tags-large {
@@ -362,7 +362,7 @@ const backToList = () => {
   color: var(--accent);
   padding: 4px 8px;
   border: 1px solid var(--accent);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* Markdown内容样式 */
@@ -374,7 +374,7 @@ const backToList = () => {
 .post-body :deep(h1),
 .post-body :deep(h2),
 .post-body :deep(h3) {
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
   margin: var(--pad-lg) 0 var(--pad-md) 0;
   font-weight: 800;
 }
@@ -395,14 +395,14 @@ const backToList = () => {
 
 .post-body :deep(p) {
   margin-bottom: var(--pad-md);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-body :deep(ul),
 .post-body :deep(ol) {
   margin-bottom: var(--pad-md);
   padding-left: var(--pad-md);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-body :deep(li) {
@@ -415,7 +415,7 @@ const backToList = () => {
   margin: var(--pad-md) 0;
   color: var(--text-sub);
   font-style: italic;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .post-body :deep(code) {

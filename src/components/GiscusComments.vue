@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
   font-weight: 800;
   letter-spacing: -1px;
   color: var(--bg);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 评论部分样式 - 与其他 section 保持一致 */

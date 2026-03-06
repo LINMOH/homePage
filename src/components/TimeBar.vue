@@ -201,7 +201,7 @@ onUnmounted(() => {
   letter-spacing: 2px;
   color: var(--text-main);
   font-variant-numeric: tabular-nums;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+      font-family: var(--font-family-heading);
 }
 
 /* 响应式设计 */

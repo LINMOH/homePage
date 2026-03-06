@@ -339,7 +339,7 @@ onMounted(() => {
   font-weight: 900;
   letter-spacing: -5px;
   margin-bottom: 40px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
   position: relative;
 }
 
@@ -361,7 +361,7 @@ onMounted(() => {
   font-size: 14px;
   letter-spacing: 4px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 区块样式 */
@@ -380,7 +380,7 @@ onMounted(() => {
   font-weight: 800;
   letter-spacing: -1px;
   color: var(--bg);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 关于部分样式 */
@@ -394,7 +394,7 @@ onMounted(() => {
   color: var(--text-sub);
   margin-bottom: var(--pad-lg);
   text-align: justify;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .about-text :deep(.taten-link) {
@@ -461,7 +461,7 @@ onMounted(() => {
   font-size: 10px;
   color: var(--accent);
   letter-spacing: 2px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 技能部分样式 */
@@ -491,14 +491,14 @@ onMounted(() => {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: var(--pad-xs);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .skill-desc {
   font-size: 14px;
   color: var(--text-sub);
   margin-bottom: var(--pad-md);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .skill-level {
@@ -537,7 +537,7 @@ onMounted(() => {
   color: var(--accent);
   font-weight: bold;
   min-width: 40px;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 网格与卡片：纯二维框线 */
@@ -566,20 +566,20 @@ onMounted(() => {
   font-size: 10px;
   color: var(--accent);
   font-weight: bold;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .card-title {
   font-size: 24px;
   font-weight: 800;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .card-desc {
   font-size: 14px;
   line-height: 1.6;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .github-stats {
@@ -595,7 +595,7 @@ onMounted(() => {
   gap: 4px;
   font-size: 12px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .github-icon {
@@ -634,7 +634,7 @@ onMounted(() => {
   font-size: 10px;
   color: var(--accent);
   font-weight: bold;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .friend-content {
@@ -660,7 +660,7 @@ onMounted(() => {
 .friend-name {
   font-size: 16px;
   font-weight: 600;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
   flex: 1;
 }
 
@@ -711,7 +711,7 @@ onMounted(() => {
   font-size: 12px;
   font-weight: bold;
   color: var(--accent);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .timeline-content {
@@ -736,21 +736,21 @@ onMounted(() => {
   color: var(--accent);
   font-weight: bold;
   margin-bottom: var(--pad-xs);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .timeline-event {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: var(--pad-xs);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .timeline-desc {
   font-size: 14px;
   color: var(--text-sub);
   line-height: 1.6;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 /* 主内容区 */

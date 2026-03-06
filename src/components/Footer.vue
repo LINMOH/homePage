@@ -35,18 +35,18 @@ const currentYear = ref(new Date().getFullYear());
   font-size: 10px;
   letter-spacing: 1px;
   color: var(--text-sub);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .accent-text {
   color: var(--accent);
   font-weight: 700;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 .copyright {
   color: var(--text-sub);
   font-weight: 400;
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-heading);
 }
 </style>

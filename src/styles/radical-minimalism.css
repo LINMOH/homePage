@@ -26,8 +26,8 @@
   --pad-xl: calc(var(--space-unit) * 15);
 
   /* 字体系统 - 极致对比 */
-  --font-family: "Verdena", "Helvetica Neue", Arial, sans-serif;
-  --font-family-heading: "Futura", "Helvetica Neue", Arial, sans-serif;
+  --font-family: "OPPO Sans", "Oxanium", "MPLUS 1", "Helvetica Neue", Arial, sans-serif;
+  --font-family-heading: "OPPO Sans", "Oxanium", "MPLUS 1", "Helvetica Neue", Arial, sans-serif;
   --font-size-xs: 10px;
   --font-size-sm: 12px;
   --font-size-base: 14px;
@@ -46,19 +46,29 @@
   --scrollbar-thumb-hover: var(--accent);
 }
 
-/* 字体定义 */
+/* 字体定义 - 多语言支持 */
 @font-face {
-  font-family: 'Futura';
-  src: url('../assets/futura.otf') format('opentype');
+  font-family: 'OPPO Sans';
+  src: url('../assets/OPPO-Sans4.0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+F900-FAFF, U+2F800-2FA1F;
 }
 
 @font-face {
-  font-family: 'Verdena';
-  src: url('../assets/verdana.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Oxanium';
+  src: url('../assets/Oxanium-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
+  unicode-range: U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F, U+0250-02AF, U+02B0-02FF, U+0300-036F, U+0370-03FF, U+0400-04FF, U+0500-052F, U+0530-058F, U+0590-05FF, U+0600-06FF, U+0700-074F, U+0750-077F, U+0780-07BF, U+07C0-07FF, U+0800-083F, U+0840-085F, U+0860-086F, U+0870-089F, U+08A0-08FF, U+0900-097F, U+0980-09FF, U+0A00-0A7F, U+0A80-0AFF, U+0B00-0B7F, U+0B80-0BFF, U+0C00-0C7F, U+0C80-0CFF, U+0D00-0D7F, U+0D80-0DFF, U+0E00-0E7F, U+0E80-0EFF, U+0F00-0FFF, U+1000-109F, U+10A0-10FF, U+1100-11FF, U+1200-137F, U+1380-139F, U+13A0-13FF, U+1400-167F, U+1680-169F, U+16A0-16FF, U+1700-171F, U+1720-173F, U+1740-175F, U+1760-177F, U+1780-17FF, U+1800-18AF, U+18B0-18FF, U+1900-194F, U+1950-197F, U+1980-19DF, U+19E0-19FF, U+1A00-1A1F, U+1A20-1AAF, U+1AB0-1AFF, U+1B00-1B7F, U+1B80-1BBF, U+1BC0-1BFF, U+1C00-1C4F, U+1C50-1C7F, U+1C80-1C8F, U+1C90-1CBF, U+1CC0-1CCF, U+1CD0-1CFF, U+1D00-1D7F, U+1D80-1DBF, U+1DC0-1DFF, U+1E00-1EFF, U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: 'MPLUS 1';
+  src: url('../assets/MPLUS1-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  unicode-range: U+3000-303F, U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+3200-32FF, U+3300-33FF, U+FF00-FFEF, U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+F900-FAFF, U+2F800-2FA1F;
 }
 
 /* 暗色主题：黑不是装饰，是介质 */
@@ -119,7 +129,7 @@
 body {
   background-color: var(--bg);
   color: var(--text-main);
-  font-family: 'Futura', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family);
   -webkit-font-smoothing: grayscale;
   line-height: 1.6;
 }

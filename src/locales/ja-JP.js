@@ -2,20 +2,19 @@ export default {
   site: {
     name: 'Bcamy',
     title: 'Bcamy - 個人ホームページ',
-    description: 'コンピュータサイエンスとWeb開発に情熱を注ぐ中学3年生・Bcamyの個人ホームページ。',
-    keywords: 'Bcamy, ポートフォリオ, ホームページ, Web開発, プログラミング',
+    description: 'コンピューターサイエンスとWeb開発に情熱を注ぐ中学3年生、Bcamyの個人ホームページです。',
+    keywords: '林墨瀚, 個人ホームページ, ポートフォリオ, Web開発, プログラミング',
     logo: '/avatar.png'
   },
   sidebar: {
     userName: 'Bcamy',
     userHandle: 'Student Developer',
-    location: '中国・済南',
-    bio: '中学3年 / Computer Science',
-    // 新しいナビゲーションボタン
+    location: 'China · Jinan',
+    bio: 'Grade 9 · Computer Science',
     navigation: {
-      home: 'ホーム',
-      log: 'ログ',
-      blog: 'ブログ'
+      home: 'Home',
+      log: 'Activity',
+      blog: 'Blog'
     }
   },
   hero: {
@@ -23,184 +22,164 @@ export default {
     subtitle: 'VER. 2026'
   },
   about: {
-    title: '01 / ABOUT',
-    text: "私は中国・済南の小さな県出身の中学3年生です。正式なコンピュータ教育がほとんどない環境で育ちましたが、幸運にも早い段階でコンピュータに出会うことができました。それをきっかけに、プログラミング、Linux、Web開発、システムアーキテクチャへと続く自発的な学習の旅が始まりました。<br />中学校で学業の負担が増すにつれ、私は一つの転機を迎えました。スピードを追い求めたり、他人と競い合ったりすることから距離を置く必要があったのです。代わりに選んだのは「持続可能性」——何年後も同じ情熱で画面の前に座り、問題を解き続けているという静かな自信でした。<br />その過程で、迷いや取捨選択も経験しました。情報オリンピック（OI）にも触れ、指導を受けましたが、最終的には自分のペースに合った道を選びました。学ぶことは競争ではなく、好奇心と規律に支えられた長期的なプロセスだと考えています。資源が限られた環境に変わりはありませんが、考え方は変わりました。インターネット、時間、そして志を同じくする仲間——今あるものを最大限に活かしています。私たちは作り、共有し、共に成長しています。私は今も学び続け、探求し続け、そして道の途中にいます。",
+    title: '01 / 私について',
+    text: "済南在住の中学3年生です。周囲にコンピューター教育の環境が充実していたわけではありませんが、早い段階でパソコンに触れたことで、プログラミングやLinux、Webなどの技術に興味を持ちました。<br />中学校に進学し、学業が忙しくなる中で、自分自身の学習のあり方を再考するようになりました。単にスピードを追い求めたり、周囲と比較したりするのではなく、何年経ってもパソコンの前に座ってじっくりと問題を解決できるような、長期的で安定した学習スタイルを大切にしたいと考えています。<br />その過程で、情報オリンピックへの挑戦や経験豊富な先生方への相談など、様々な試行錯誤もありました。しかし、最終的には競争に縛られるよりも、自分のペースで継続的に学んでいくことが自分に合っていると気づきました。<br />環境やリソースに限りはありますが、インターネットには無限の可能性があります。オンラインで学び、志を同じくする仲間と出会い、プロジェクトの制作やアイデアの共有を通じて日々成長しています。<br />現在もなお、コンピューターの世界をゆっくりと探索しながら学び続けています。",
     stats: [
       {
+        number: 'INTJ',
+        label: 'MBTI'
+      },
+      {
         number: '15',
-        label: 'AGES'
+        label: '年齢'
       },
       {
         number: '10+',
-        label: 'PROJECTS'
+        label: 'プロジェクト数'
       },
       {
         number: '7+',
-        label: 'CODING YEARS'
+        label: 'プログラミング歴'
       },
       {
         number: '1000+',
-        label: 'COMMITS'
+        label: 'コードコミット'
       },
       {
-        number: '10000+',
-        label: 'HOURS CODING'
-      },
-      {
-        number: '500000+',
-        label: 'TOTAL VIEWS'
+        number: '500,000+',
+        label: '総閲覧数'
       }
     ]
   },
   skills: {
-    title: '02 / SKILLS',
+    title: '02 / スキル',
     items: [
       {
         id: 'skill-1',
         name: 'C / C++',
-        description: 'アルゴリズム学習やコンピュータシステムの基礎理解のためのツールとして使用。',
+        description: 'アルゴリズムの学習および計算機システムの基礎を理解するためのツールとして使用。',
         level: 70
-      },
-      {
-        id: 'skill-2',
-        name: 'Golang',
-        description: '可読性と並行処理を重視し、シンプルなバックエンドサービスやツールを構築。',
-        level: 60
       },
       {
         id: 'skill-3',
         name: 'Python',
-        description: 'スクリプト作成、自動化、素早い実験のために使用。',
+        description: 'スクリプト作成、自動化、および迅速なプロトタイピングに使用。',
         level: 75
       },
       {
         id: 'skill-4',
         name: 'JAVA',
-        description: 'オブジェクト指向プログラミングの学習と基本的なアプリケーション開発。',
+        description: 'オブジェクト指向の概念学習と基礎的なアプリケーション構築に使用。',
         level: 50
       },
       {
         id: 'skill-5',
         name: 'Vue.js',
-        description: 'シンプルでインタラクティブなWebユーザーインターフェースを構築。',
-        level: 75
+        description: 'シンプルでインタラクティブなWebフロントエンドの構築に使用。',
+        level: 40
       },
       {
         id: 'skill-6',
         name: 'Linux',
-        description: 'Linuxの利用および基本的なシステム管理に精通。',
+        description: '日常的な利用と基礎的なシステム管理に精通。過去にLinuxカーネル開発への参加経験あり。',
         level: 85
       },
       {
         id: 'skill-7',
         name: 'Unreal Engine',
-        description: 'ゲーム開発、リアルタイムレンダリング、インタラクティブ設計の学習に使用。',
+        description: 'ゲーム開発、リアルタイムレンダリング、インタラクティブシステム設計の学習に使用。',
         level: 60
       },
       {
         id: 'skill-8',
         name: 'Algorithms & Data Structures',
-        description: '問題解決力と論理的思考を重視し、基礎的なアルゴリズムとデータ構造を学習中。',
+        description: '主要なアルゴリズムとデータ構造を学習中。問題解決と論理的思考に重点。',
         level: 30
       },
       {
         id: 'skill-9',
         name: 'Operating system',
-        description: 'プロセス、メモリ管理など、OSの基本的な仕組みを学習中。',
-        level: 40
+        description: 'プロセス、メモリ、基本コンセプトを含むOSの動作原理を学習。',
+        level: 70
       },
       {
         id: 'skill-10',
         name: 'Video Production',
-        description: 'Blender、DaVinci Resolve、After Effects、Premiere Proを用いた映像制作。',
-        level: 60
+        description: 'Blender、DaVinci Resolve、After Effects、Premiere Proを用いた映像編集と視覚制作。',
+        level: 72
       }
     ]
   },
   websites: {
-    title: '03 / WEBSITES',
+    title: '03 / ウェブサイト',
     items: [
       {
         id: 'website-1',
-        title: 'My Blog',
-        description: '技術と日常についての個人ブログ',
+        title: 'マイブログ',
+        description: '技術的な記録を綴る個人ブログ。',
         status: 'ACTIVE',
         link: 'https://linmohan.fun'
       },
       {
         id: 'website-4',
-        title: 'linmohan.fun',
-        description: '個人ホームページ兼ポートフォリオ',
+        title: 'linmohan.net',
+        description: '個人ホームページおよびポートフォリオ。',
         status: 'ACTIVE',
         link: 'https://linmohan.fun'
       },
       {
         id: 'website-5',
         title: 'book.linmohan.fun',
-        description: 'プログラミング・計算機科学・長期学習のためのキュレーションライブラリ。',
+        description: 'コンピューターサイエンス向けの厳選資料ライブラリ。',
         status: 'ACTIVE',
         link: 'https://book.linmohan.fun'
       },
       {
         id: 'website-5',
-        title: 'TATEN Website',
-        description: 'TATENプログラミングチーム公式サイト',
+        title: 'TATEN 公式サイト',
+        description: 'TATEN チームの公式ウェブサイト。',
         status: 'ACTIVE',
         link: 'https://taten.org'
-      },
-      {
-        id: 'website-2',
-        title: 'bailan.top',
-        description: '力を抜いて、ストレスと過労に抗う。',
-        status: 'ACTIVE',
-        link: 'https://bailan.top'
-      },
-      {
-        id: 'website-3',
-        title: 'no.neijuan.fun',
-        description: '過度な競争を拒否し、バランスの取れた生活を。',
-        status: 'COMPLETED',
-        link: 'https://no.neijuan.fun'
       }
     ]
   },
   timeline: {
-    title: '04 / TIMELINE',
+    title: '04 / タイムライン',
     items: [
-      {
-        "id": "timeline-1",
-        "age": "6歳 / 2016年",
-        "event": "コンピューターとの出会い",
-        "description": "初めてコンピューターに触れる"
-      },
-      {
-        "id": "timeline-2",
-        "age": "8歳 / 2018年",
-        "event": "プログラミングを始める",
-        "description": "Pythonの学習を開始"
-      },
-      {
-        "id": "timeline-3",
-        "age": "13歳 / 2023年",
-        "event": "初めてのウェブサイトを公開",
-        "description": "HTMLとCSSを使って最初の個人サイトを制作"
-      },
-      {
-        "id": "timeline-4",
-        "age": "15歳 / 2025年",
-        "event": "TATENを結成",
-        "description": "友人と共にTATENプログラミングチームを共同設立"
-      },
-      {
-        "id": "timeline-5",
-        "age": "",
-        "event": "これから",
-        "description": "コンピューターサイエンスと学業に専念する"
-      }
+    {
+      "id": "timeline-1",
+      "age": "6歳 / 2016年",
+      "event": "コンピューターとの出会い",
+      "description": "初めてパソコンに触れる。"
+    },
+    {
+      "id": "timeline-2",
+      "age": "8歳 / 2018年",
+      "event": "プログラミング開始",
+      "description": "Pythonの学習を開始。"
+    },
+    {
+      "id": "timeline-3",
+      "age": "13歳 / 2023年",
+      "event": "初サイト公開",
+      "description": "HTMLとCSSで最初の個人サイトを制作。"
+    },
+    {
+      "id": "timeline-4",
+      "age": "15歳 / 2025年",
+      "event": "TATEN 設立",
+      "description": "友人たちとプログラミングチーム「TATEN」を共同設立。"
+    },
+    {
+      "id": "timeline-5",
+      "age": "",
+      "event": "今後の計画",
+      "description": "コンピューターサイエンスと学業の両立に注力。"
+    }
     ]
   },
   projects: {
-    title: '05 / PROJECTS',
+    title: '05 / プロジェクト',
     items: [
       {
         id: 'project-1',
@@ -217,7 +196,7 @@ export default {
       {
         id: 'project-3',
         title: 'TATEN-OJ',
-        description: 'シンプルで高速、オープンソースのオンラインジャッジ。',
+        description: 'シンプルで高速なオープンソースのオンラインジャッジシステム。',
         status: 'PLANNING',
         link: '#'
       },
@@ -230,36 +209,36 @@ export default {
     ]
   },
   team: {
-    title: '07 / ABOUT TEAM',
+    title: '07 / チームについて',
     logo: '/taten.png',
-    text: "<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は、中国の中学生によって結成された小規模な学生主体の技術チームです。正式なコンピュータサイエンス教育へのアクセスが限られた環境の中で、学習の多くは自己探求、オンライン資源、そして仲間同士の協力に依存していました。<br />当初から、<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は競争や短期的な成果を目的としていませんでした。コンピュータやソフトウェア、システムが実際にどのように動いているのかという純粋な好奇心から生まれたチームです。メンバーはプロジェクト制作や実験を通じて、プログラミング言語、Linux、Web開発、計算機科学の基礎を学んできました。<br />学業のプレッシャーが高まる中で、チームはペースと方向性を調整しました。スピードや外部との比較ではなく、持続可能な学習、基礎重視、本当に有用で面白いものを作ることを選びました。進捗は均一ではありませんが、着実に続いています。<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は資源の限られた小さなチームですが、内発的なモチベーションは非常に強いです。知識を共有し、議論し、互いの成果をレビューしながら共に成長しています。チームは今も進化の途中であり、学び続け、一歩ずつ前に進んでいます。",
+    text: "<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は、中国の中学生によって自発的に結成された小規模な技術チームです。教育リソースが限られた環境で誕生し、メンバーは主に独学やオンラインリソース、仲間との協力を通じて学習しています。<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は競技や短期的な目標のためではなく、コンピューター、ソフトウェア、そしてシステムの仕組みに対する純粋な好奇心から設立されました。プロジェクトの実践や試行錯誤を通じて、プログラミング言語、Linux、Web開発、そしてコンピューターサイエンスの基礎を追求しています。<br />学業の負担が増えるにつれ、チームはペースと方向性を調整してきました。外部との比較やスピードよりも、<a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> は長期的な持続可能性を重視しています。着実に学び、基礎を固め、真に意味のある、あるいは興味深いプロジェクトを構築することを目指しています。歩みは時に緩やかですが、常に前進し続けています。<br /><a href='https://taten.org/' target='_blank' rel='noopener noreferrer' class='taten-link'>TATEN</a> はまだ規模が小さくリソースも限られていますが、強い内発的動機を持っています。メンバー間で知識を共有し、アイデアを議論し、コードレビューを行うことで共に成長しています。チームは今も進化し、学び、そして前進し続けています。",
     stats: [
       {
         number: '13+',
-        label: 'Members'
+        label: 'メンバー'
       },
       {
         number: '12+',
-        label: 'Cities'
+        label: '拠点都市'
       },
       {
         number: '20+',
-        label: 'Tech Stacks'
+        label: '使用技術'
       }
     ]
   },
   friends: {
-    title: '08 / 友達リンク'
+    title: '08 / リンク'
   },
   device: {
     title: '06 / デバイス',
     computer: {
-      title: 'コンピューターシステム',
+      title: 'ハードウェア',
       specs: [
         { label: 'CPU', value: 'Intel Core Ultra 265K' },
         { label: 'GPU', value: 'NVIDIA GeForce RTX 5070' },
         { label: 'RAM', value: '64GB DDR5' },
-        { label: 'ストレージ', value: '7TB NVMe SSD' }
+        { label: 'ROM', value: '7TB NVMe SSD' }
       ]
     },
     peripherals: {
@@ -268,34 +247,34 @@ export default {
         { label: 'キーボード', value: 'Logitech Alto Keys K98M' },
         { label: 'マウス', value: 'Logitech G304' },
         { label: 'モニター', value: 'LG 27" 4K + KTC 24"' },
-        { label: 'オーディオ', value: 'Audio-Technica AT2040' }
+        { label: 'オーディオ', value: '内蔵スピーカー' }
       ]
     },
     software: {
       title: 'ソフトウェア',
       specs: [
-        { label: 'エディター', value: 'VS Code' },
+        { label: 'IDE', value: 'VS Code' },
         { label: 'ブラウザ', value: 'Chrome' },
-        { label: 'ターミナル', value: 'Konsole' },
+        { label: 'ターミナル', value: 'Alacritty' },
         { label: 'バージョン管理', value: 'Git' }
       ]
     },
     os: {
       title: 'オペレーティングシステム',
       specs: [
-        { label: 'プライマリ', value: 'Windows 11' },
-        { label: 'セカンダリ', value: 'Arch Linux' },
-        { label: 'シェル', value: 'Bash / PowerShell' },
-        { label: '仮想化', value: 'Docker' }
+        { label: 'メイン', value: 'Arch Linux' },
+        { label: 'サブ', value: 'Windows 11' },
+        { label: 'シェル', value: 'Fish' },
+        { label: '仮想化', value: 'KVM + QEMU' }
       ]
     }
   },
   contact: {
-    title: '09 / CONTACT',
+    title: '09 / お問い合わせ',
     items: [
       {
         id: 'contact-1',
-        title: 'Email',
+        title: 'EMAIL',
         description: 'linmhwork@outlook.com',
         type: 'EMAIL',
         link: 'mailto:linmhwork@outlook.com'
@@ -331,7 +310,7 @@ export default {
       {
         id: 'contact-6',
         title: 'Location',
-        description: '中国・山東省済南市',
+        description: '中国 · 山東省 · 済南',
         type: 'LOCATION',
         link: '#'
       }
@@ -341,23 +320,22 @@ export default {
     title: '10 / コメント'
   },
   footer: {
-    location: '緯度: 36.292° N / 経度: 116.4501° E',
+    location: '北緯: 36.292° / 東経: 116.4501°',
     copyrightStartYear: '2023'
   },
-  // 新しいページコンテンツ
   log: {
-    title: 'ログ',
+    title: 'アクティビティ',
     loading: '読み込み中...',
-    error: '読み込みに失敗しました。後でもう一度お試しください',
-    noIssues: 'まだ更新はありません',
+    error: '読み込みに失敗しました。後でやり直してください。',
+    noIssues: 'アクティビティはありません',
     viewOnGitHub: 'GitHubで見る'
   },
   blog: {
     title: 'ブログ',
     loading: '読み込み中...',
-    error: '読み込みに失敗しました。後でもう一度お試しください',
-    noPosts: 'まだブログ記事はありません',
-    readMore: '続きを読む',
-    backToList: 'リストに戻る'
+    error: '読み込みに失敗しました。後でやり直してください。',
+    noPosts: '記事がありません',
+    readMore: '詳しく見る',
+    backToList: '一覧に戻る'
   }
 }
