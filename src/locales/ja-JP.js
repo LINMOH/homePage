@@ -14,7 +14,8 @@ export default {
     navigation: {
       home: 'Home',
       log: 'Log',
-      blog: 'Blog'
+      blog: 'Blog',
+      cv: 'CV'
     }
   },
   hero: {

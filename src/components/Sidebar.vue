@@ -54,7 +54,8 @@ const navItems = computed(() => {
   return [
     { id: 'home', label: navContent.home || 'Home' },
     { id: 'log', label: navContent.log || 'Log' },
-    { id: 'blog', label: navContent.blog || 'Blog' }
+    { id: 'blog', label: navContent.blog || 'Blog' },
+    { id: 'cv', label: navContent.cv || 'CV' }
   ];
 });
 
@@ -63,6 +64,12 @@ const switchPage = (pageId) => {
   if (pageId === 'blog') {
     // 跳转到外部链接
     window.open('https://linmohan.fun/', '_blank');
+    return;
+  }
+  
+  if (pageId === 'cv') {
+    // 跳转到简历PDF
+    window.open('https://linmoh.github.io/cv/cv.pdf', '_blank');
     return;
   }
   
@@ -77,14 +84,14 @@ const switchPage = (pageId) => {
 onMounted(() => {
   // 从URL hash获取当前页面
   const hash = window.location.hash.replace('#', '');
-  if (hash && ['', 'log', 'blog'].includes(hash)) {
+  if (hash && ['', 'log', 'blog', 'cv'].includes(hash)) {
     activeNav.value = hash;
   }
   
   // 监听hash变化
   window.addEventListener('hashchange', () => {
     const newHash = window.location.hash.replace('#', '');
-    if (newHash && ['home', 'log', 'blog'].includes(newHash)) {
+    if (newHash && ['home', 'log', 'blog', 'cv'].includes(newHash)) {
       activeNav.value = newHash;
     }
   });

@@ -15,7 +15,8 @@ export default {
     navigation: {
       home: '主页',
       log: '动态',
-      blog: '博客'
+      blog: '博客',
+      cv: '简历'
     }
   },
   hero: {
