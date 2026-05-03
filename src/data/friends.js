@@ -62,5 +62,12 @@ export const friends = [
     avatar: 'https://www.cn059.com/wp-content/uploads/2025/05/CN059.jpg',
     link: 'https://www.cn059.com',
     status: 'ACTIVE'
+  },
+  {
+    id: 'friend-12',
+    name: 'Liáng4793',
+    avatar: 'https://s2.loli.net/2025/07/07/foviyjeDx1MXbwk.png',
+    link: 'liang4793.github.io',
+    status: 'ACTIVE'
   }
 ];
