@@ -238,9 +238,9 @@ export default {
       title: '硬件',
       specs: [
         { label: 'CPU', value: 'Intel Core Ultra 265K' },
-        { label: 'GPU', value: 'NVIDIA GeForce RTX 5070' },
         { label: 'RAM', value: '64GB DDR5' },
-        { label: 'ROM', value: '7TB NVMe SSD' }
+        { label: 'ROM', value: '7TB NVMe SSD' },
+        { label: 'Laptop', value: 'MacBook Air M5' },
       ]
     },
     peripherals: {
@@ -249,7 +249,7 @@ export default {
         { label: '键盘', value: 'Logitech Alto Keys K98M' },
         { label: '鼠标', value: 'Logitech G304' },
         { label: '显示器', value: 'LG 27" 4K + KTC 24"' },
-        { label: '音频', value: '内置扬声器' }
+        { label: '音频', value: 'Audio-technica AT2040' }
       ]
     },
     software: {
