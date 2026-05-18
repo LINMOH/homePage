@@ -137,7 +137,7 @@ export default {
         link: 'https://book.linmohan.fun'
       },
       {
-        id: 'website-5',
+        id: 'website-6',
         title: 'TATEN 官网',
         description: 'TATEN 团队官方网站',
         status: 'ACTIVE',
@@ -264,9 +264,9 @@ export default {
     os: {
       title: '操作系统',
       specs: [
-        { label: '主系统', value: 'Arch Linux' },
-        { label: '次系统', value: 'Windows 11' },
-        { label: 'Shell', value: 'Fish' },
+        { label: '主系统', value: 'MacOS' },
+        { label: '次系统', value: 'Arch Linux' },
+        { label: 'Shell', value: 'zsh' },
         { label: '虚拟化', value: 'KVM + QEMU' }
       ]
     }

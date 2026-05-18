@@ -109,18 +109,25 @@
           <h3 class="card-title">{{ project.title }}</h3>
           <p class="card-desc">{{ getProjectDescription(project) }}</p>
           <div v-if="project.link && project.link.includes('github.com')" class="github-stats">
-            <div class="github-stat">
-              <i class="fa-solid fa-star github-icon"></i>
-              <span class="github-value">{{ getProjectInfo(project.id)?.stars || 0 }}</span>
-            </div>
-            <div class="github-stat">
-              <i class="fa-solid fa-code-fork github-icon"></i>
-              <span class="github-value">{{ getProjectInfo(project.id)?.forks || 0 }}</span>
-            </div>
-            <div class="github-stat">
-              <i class="fa-solid fa-circle github-icon"></i>
-              <span class="github-value">{{ getProjectInfo(project.id)?.language || 'N/A' }}</span>
-            </div>
+            <template v-if="githubProjectsLoading">
+              <div class="github-stat">
+                <span class="github-value skeleton-text">---</span>
+              </div>
+            </template>
+            <template v-else>
+              <div class="github-stat">
+                <i class="fa-solid fa-star github-icon"></i>
+                <span class="github-value">{{ getProjectInfo(project.id)?.stars || 0 }}</span>
+              </div>
+              <div class="github-stat">
+                <i class="fa-solid fa-code-fork github-icon"></i>
+                <span class="github-value">{{ getProjectInfo(project.id)?.forks || 0 }}</span>
+              </div>
+              <div class="github-stat">
+                <i class="fa-solid fa-circle github-icon"></i>
+                <span class="github-value">{{ getProjectInfo(project.id)?.language || 'N/A' }}</span>
+              </div>
+            </template>
           </div>
         </a>
       </div>
@@ -137,7 +144,7 @@
       <div class="about-content">
         <div class="team-logo" :class="{ 'animate': isTeamVisible }">
           <a href="https://taten.xyz/" target="_blank" rel="noopener noreferrer" class="team-logo-link">
-            <img :src="getPublicPath(content.team.logo)" :alt="content.team.title" />
+            <img :src="getPublicPath(content.team.logo)" :alt="content.team.title" loading="lazy" />
           </a>
         </div>
         <p class="about-text" v-html="content.team.text"></p>
@@ -167,7 +174,7 @@
           <div class="friend-meta">00{{ index + 1 }} / {{ friend.status || 'ACTIVE' }}</div>
           <div class="friend-content">
             <div class="friend-avatar">
-              <img :src="getPublicPath(friend.avatar)" :alt="friend.name" />
+              <img :src="getPublicPath(friend.avatar)" :alt="friend.name" loading="lazy" />
             </div>
             <h3 class="friend-name">{{ friend.name }}</h3>
           </div>
@@ -202,23 +209,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed, watch } from 'vue';
-import { currentLanguage, getPublicPath } from '../locales';
-import { useGithubRepo } from '../api/github.js';
+import { ref, onMounted, onUnmounted, computed, watch } from 'vue';
+import { currentLanguage, getPublicPath, useLocaleContent } from '../locales';
+import { extractRepoInfo, fetchRepoInfo } from '../api/github.js';
 import { friends } from '../data/friends.js';
-import zhCN from '../locales/zh-CN.js';
-import enUS from '../locales/en-US.js';
-import jaJP from '../locales/ja-JP.js';
 import GiscusComments from './GiscusComments.vue';
 import DeviceContent from './DeviceContent.vue';
 
-// 根据当前语言获取内容
-const content = computed(() => {
-  const lang = currentLanguage.value;
-  if (lang === 'zh') return zhCN;
-  if (lang === 'jp') return jaJP;
-  return enUS;
-});
+const { content } = useLocaleContent();
 
 const typedTitle = ref('');
 const fullTitle = computed(() => content.value.hero?.title || '');
@@ -249,24 +247,44 @@ const isTeamVisible = ref(false);
 
 // GitHub 项目信息
 const githubProjects = ref([]);
+const githubProjectsLoading = ref(false);
+let githubRefreshTimer = null;
 
-// 初始化 GitHub 项目信息
-const initializeGithubProjects = () => {
-  githubProjects.value = [];
-  content.value.projects?.items?.forEach(project => {
+const fetchGithubProjects = async () => {
+  const projects = content.value.projects?.items;
+  if (!projects) return;
+
+  githubProjectsLoading.value = true;
+
+  const results = [];
+  for (const project of projects) {
     if (project.link && project.link.includes('github.com')) {
-      const projectInfo = useGithubRepo(project.link);
-      githubProjects.value.push({
-        id: project.id,
-        ...projectInfo
-      });
+      const repoData = extractRepoInfo(project.link);
+      if (repoData) {
+        const info = await fetchRepoInfo(repoData.owner, repoData.repo);
+        results.push({ id: project.id, ...info });
+      }
     }
-  });
+  }
+  githubProjects.value = results;
+  githubProjectsLoading.value = false;
+};
+
+const startGithubRefreshTimer = () => {
+  stopGithubRefreshTimer();
+  githubRefreshTimer = setInterval(fetchGithubProjects, 5 * 60 * 1000);
+};
+
+const stopGithubRefreshTimer = () => {
+  if (githubRefreshTimer) {
+    clearInterval(githubRefreshTimer);
+    githubRefreshTimer = null;
+  }
 };
 
 // 监听语言变化，重新初始化 GitHub 项目和打字效果
 watch(currentLanguage, () => {
-  initializeGithubProjects();
+  fetchGithubProjects();
   typeWriter();
 }, { immediate: true });
 
@@ -314,15 +332,23 @@ const getProjectDescription = (project) => {
 };
 
 onMounted(() => {
-  // 添加滚动监听
   window.addEventListener('scroll', checkSkillsVisibility);
   window.addEventListener('resize', checkSkillsVisibility);
   window.addEventListener('scroll', checkTeamVisibility);
   window.addEventListener('resize', checkTeamVisibility);
 
-  // 初始检查
+  startGithubRefreshTimer();
+
   setTimeout(checkSkillsVisibility, 100);
   setTimeout(checkTeamVisibility, 100);
+});
+
+onUnmounted(() => {
+  stopGithubRefreshTimer();
+  window.removeEventListener('scroll', checkSkillsVisibility);
+  window.removeEventListener('resize', checkSkillsVisibility);
+  window.removeEventListener('scroll', checkTeamVisibility);
+  window.removeEventListener('resize', checkTeamVisibility);
 });
 </script>
 

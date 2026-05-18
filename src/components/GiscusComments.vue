@@ -11,17 +11,9 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed, watch } from 'vue';
-import { currentLanguage } from '../locales';
-import zhCN from '../locales/zh-CN.js';
-import enUS from '../locales/en-US.js';
-import jaJP from '../locales/ja-JP.js';
+import { currentLanguage, useLocaleContent } from '../locales';
 
-const content = computed(() => {
-  const lang = currentLanguage.value;
-  if (lang === 'zh') return zhCN;
-  if (lang === 'jp') return jaJP;
-  return enUS;
-});
+const { content } = useLocaleContent();
 
 const giscusContainer = ref(null);
 let themeObserver = null;

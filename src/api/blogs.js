@@ -44,7 +44,9 @@ const md = new MarkdownIt({
     if (lang && hljs.getLanguage(lang)) {
       try {
         return hljs.highlight(str, { language: lang }).value;
-      } catch (__) {}
+      } catch (_) {
+        return '';
+      }
     }
     return '';
   }
@@ -59,22 +61,20 @@ md.renderer.render = function(tokens, options, env) {
   let result = originalRender.call(this, tokens, options, env);
   
   // 处理行内数学公式：$...$
-  result = result.replace(/\$([^\$\n]+?)\$/g, (match, math) => {
-    // 转义特殊字符
+  result = result.replace(/\$([^$\n]+?)\$/g, (match, math) => {
     math = math.replace(/&/g, '&amp;')
                .replace(/</g, '&lt;')
                .replace(/>/g, '&gt;')
-               .replace(/\"/g, '&quot;');
+               .replace(/"/g, '&quot;');
     return `<span class="math-inline">\\(${math}\\)</span>`;
   });
   
   // 处理块级数学公式：$$...$$
   result = result.replace(/\$\$([\s\S]+?)\$\$/g, (match, math) => {
-    // 转义特殊字符
     math = math.replace(/&/g, '&amp;')
                .replace(/</g, '&lt;')
                .replace(/>/g, '&gt;')
-               .replace(/\"/g, '&quot;');
+               .replace(/"/g, '&quot;');
     return `<div class="math-block">\\[${math}\\]</div>`;
   });
   

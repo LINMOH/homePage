@@ -1,15 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bcamy!</title>
+    <title>Bcamy - Personal Homepage</title>
     <meta name="description" content="Personal homepage of Bcamy, a Grade 9 student passionate about computer science and web development." />
-    <meta name="keywords" content="Bcamy, portfolio, homepage, web development, programming" />
+    <meta name="keywords" content="Bcamy, Lin Mohan, portfolio, homepage, web development, programming, Arch Linux, Vue" />
     <meta name="author" content="Bcamy" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://linmohan.fun/" />
+
+    <meta property="og:title" content="Bcamy - Personal Homepage" />
+    <meta property="og:description" content="Personal homepage of Bcamy, a Grade 9 student passionate about computer science and web development." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://linmohan.fun/" />
+    <meta property="og:image" content="/avatar.png" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Bcamy - Personal Homepage" />
+    <meta name="twitter:description" content="Personal homepage of Bcamy, a Grade 9 student passionate about computer science and web development." />
+
     <link rel="icon" type="image/x-icon" href="/avatar.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- MathJax for mathematical formulas -->
     <script>
       window.MathJax = {
         tex: {
@@ -25,15 +37,12 @@
         },
         startup: {
           ready: () => {
-            // 当MathJax准备好时
             MathJax.startup.defaultReady();
-            
-            // 初始渲染
+
             if (MathJax.typesetPromise) {
               MathJax.typesetPromise();
             }
-            
-            // 监听DOM变化，重新渲染数学公式
+
             const observer = new MutationObserver((mutations) => {
               let shouldUpdate = false;
               for (const mutation of mutations) {
@@ -42,15 +51,14 @@
                   break;
                 }
               }
-              
+
               if (shouldUpdate && MathJax.typesetPromise) {
-                // 延迟执行，确保Vue已经完成渲染
                 setTimeout(() => {
                   MathJax.typesetPromise();
                 }, 100);
               }
             });
-            
+
             observer.observe(document.body, {
               childList: true,
               subtree: true

@@ -1,17 +1,15 @@
-
-+<template>
+<template>
   <aside class="sidebar">
     <div class="sidebar-content">
       <div class="avatar-section">
-        <img :src="getPublicPath(content.site.logo)" :alt="content.site.name" class="avatar" />
+        <img :src="getPublicPath(content.site.logo)" :alt="content.site.name" class="avatar" loading="lazy" />
         <h1 class="user-name">{{ content.sidebar.userName }}</h1>
         <p class="user-handle">{{ content.sidebar.userHandle }}</p>
       </div>
 
-      <!-- 导航按钮 -->
       <nav class="sidebar-nav">
-        <button 
-          v-for="(navItem, index) in navItems" 
+        <button
+          v-for="(navItem, index) in navItems"
           :key="navItem.id"
           class="nav-button"
           :class="{ 'active': activeNav === navItem.id }"
@@ -31,13 +29,16 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue';
+import { computed, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { currentLanguage, getPublicPath } from '../locales';
 import zhCN from '../locales/zh-CN.js';
 import enUS from '../locales/en-US.js';
 import jaJP from '../locales/ja-JP.js';
 
-// 根据当前语言获取内容
+const route = useRoute();
+const router = useRouter();
+
 const content = computed(() => {
   const lang = currentLanguage.value;
   if (lang === 'zh') return zhCN;
@@ -45,10 +46,8 @@ const content = computed(() => {
   return enUS;
 });
 
-// 当前激活的导航项
 const activeNav = ref('home');
 
-// 导航项配置
 const navItems = computed(() => {
   const navContent = content.value.sidebar.navigation || {};
   return [
@@ -59,47 +58,36 @@ const navItems = computed(() => {
   ];
 });
 
-// 切换页面
 const switchPage = (pageId) => {
   if (pageId === 'blog') {
-    // 跳转到外部链接
     window.open('https://linmohan.fun/', '_blank');
     return;
   }
-  
+
   if (pageId === 'cv') {
-    // 跳转到简历PDF
     window.open('https://linmoh.github.io/cv/cv.pdf', '_blank');
     return;
   }
-  
+
   activeNav.value = pageId;
-  // 触发自定义事件，通知父组件切换页面
-  window.dispatchEvent(new CustomEvent('page-switch', { 
-    detail: { page: pageId }
-  }));
+  const path = pageId === 'home' ? '/' : `/${pageId}`;
+  router.push(path);
 };
 
-// 监听页面切换事件
-onMounted(() => {
-  // 从URL hash获取当前页面
-  const hash = window.location.hash.replace('#', '');
-  if (hash && ['', 'log', 'blog', 'cv'].includes(hash)) {
-    activeNav.value = hash;
+const routeToNavMap = {
+  '/': 'home',
+  '/log': 'log',
+  '/blog': 'blog'
+};
+
+watch(() => route.path, (newPath) => {
+  if (routeToNavMap[newPath]) {
+    activeNav.value = routeToNavMap[newPath];
   }
-  
-  // 监听hash变化
-  window.addEventListener('hashchange', () => {
-    const newHash = window.location.hash.replace('#', '');
-    if (newHash && ['home', 'log', 'blog', 'cv'].includes(newHash)) {
-      activeNav.value = newHash;
-    }
-  });
-});
+}, { immediate: true });
 </script>
 
 <style scoped>
-/* 侧栏：极简主义风格 */
 .sidebar {
   width: 320px;
   border-right: 1px solid var(--border-color);
@@ -140,7 +128,6 @@ onMounted(() => {
   font-family: var(--font-family-heading);
 }
 
-/* 导航样式 */
 .sidebar-nav {
   margin: var(--pad-lg) 0;
   display: flex;
@@ -219,7 +206,6 @@ onMounted(() => {
   font-family: var(--font-family-heading);
 }
 
-/* 响应式设计 */
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;

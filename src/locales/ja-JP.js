@@ -255,17 +255,17 @@ export default {
       title: 'ソフトウェア',
       specs: [
         { label: 'IDE', value: 'VS Code' },
-        { label: 'ブラウザ', value: 'Chrome' },
-        { label: 'ターミナル', value: 'Alacritty' },
+        { label: 'ブラウザ', value: 'Safari' },
+        { label: 'ターミナル', value: 'Ghostty' },
         { label: 'バージョン管理', value: 'Git' }
       ]
     },
     os: {
       title: 'オペレーティングシステム',
       specs: [
-        { label: 'メイン', value: 'Arch Linux' },
-        { label: 'サブ', value: 'Windows 11' },
-        { label: 'シェル', value: 'Fish' },
+        { label: 'メイン', value: 'MacOS' },
+        { label: 'サブ', value: 'Arch Linux' },
+        { label: 'シェル', value: 'zsh' },
         { label: '仮想化', value: 'KVM + QEMU' }
       ]
     }

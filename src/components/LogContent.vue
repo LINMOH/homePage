@@ -75,29 +75,18 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from 'vue';
-import { currentLanguage } from '../locales';
-import zhCN from '../locales/zh-CN.js';
-import enUS from '../locales/en-US.js';
-import jaJP from '../locales/ja-JP.js';
+import { onMounted } from 'vue';
+import { useLocaleContent } from '../locales';
 import MarkdownIt from 'markdown-it';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github-dark.css';
 
-// 导入你定义的逻辑 (假设文件名是 useGitHub.js)
-import { useGitHubIssues } from '../api/issues.js'; 
+import { useGitHubIssues } from '../api/issues.js';
 
-// 1. 基础配置
 const GITHUB_API_URL = 'https://api.github.com/repos/LINMOH/homePage/issues';
 
-// 2. 国际化内容映射
-const content = computed(() => {
-  const lang = currentLanguage.value;
-  const dict = { zh: zhCN, jp: jaJP, en: enUS };
-  return dict[lang] || enUS;
-});
+const { content } = useLocaleContent();
 
-// 3. 配置 Markdown-it
 const md = new MarkdownIt({
   html: true,
   linkify: true,
@@ -106,27 +95,26 @@ const md = new MarkdownIt({
     if (lang && hljs.getLanguage(lang)) {
       try {
         return hljs.highlight(str, { language: lang }).value;
-      } catch (__) {}
+      } catch (_) {
+        return '';
+      }
     }
-    return ''; 
+    return '';
   }
 });
 
-// 4. 调用 Composable 获取真实数据
-const { 
-  issues, 
-  loading, 
-  error, 
-  hasIssues, 
-  refresh 
+const {
+  issues,
+  loading,
+  error,
+  hasIssues,
+  refresh
 } = useGitHubIssues(GITHUB_API_URL);
 
-// 渲染 Markdown 辅助函数
 const renderMarkdown = (text) => (text ? md.render(text) : '');
 
-// 5. 生命周期管理
 onMounted(() => {
-  refresh(); // 组件挂载时抓取数据
+  refresh();
 });
 </script>
 

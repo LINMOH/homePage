@@ -6,19 +6,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import { currentLanguage } from '../locales';
-import zhCN from '../locales/zh-CN.js';
-import enUS from '../locales/en-US.js';
-import jaJP from '../locales/ja-JP.js';
+import { ref } from 'vue';
+import { useLocaleContent } from '../locales';
 
-// 根据当前语言获取内容
-const content = computed(() => {
-  const lang = currentLanguage.value;
-  if (lang === 'zh') return zhCN;
-  if (lang === 'jp') return jaJP;
-  return enUS;
-});
+const { content } = useLocaleContent();
 
 const currentYear = ref(new Date().getFullYear());
 </script>

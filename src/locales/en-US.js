@@ -255,17 +255,17 @@ export default {
       title: 'Software',
       specs: [
         { label: 'IDE', value: 'VS Code' },
-        { label: 'Browser', value: 'Chrome' },
-        { label: 'Terminal', value: 'Alacritty' },
+        { label: 'Browser', value: 'Safari' },
+        { label: 'Terminal', value: 'Ghostty' },
         { label: 'VCS', value: 'Git' }
       ]
     },
     os: {
       title: 'Operating System',
       specs: [
-        { label: 'Main', value: 'Arch Linux' },
-        { label: 'Secondary', value: 'Windows 11' },
-        { label: 'Shell', value: 'Fish' },
+        { label: 'Main', value: 'MacOS' },
+        { label: 'Secondary', value: 'Arch Linux' },
+        { label: 'Shell', value: 'zsh' },
         { label: 'Virtualization', value: 'KVM + QEMU' }
       ]
     }
