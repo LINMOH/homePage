@@ -69,5 +69,12 @@ export const friends = [
     avatar: 'https://s2.loli.net/2025/07/07/foviyjeDx1MXbwk.png',
     link: 'https://liang4793.github.io',
     status: 'ACTIVE'
+  },
+  {
+    id: 'friend-13',
+    name: 'lvdousha',
+    avatar: 'https://lvdousha26.github.io/avatar/avatar.webp',
+    link: 'https://lvdousha26.github.io/',
+    status: 'ACTIVE'
   }
 ];
